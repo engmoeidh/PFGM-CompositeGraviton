@@ -40,70 +40,268 @@ Emergent Spin--2 Sector and Composite Graviton}
 \maketitle
 
 \begin{abstract}
-% Short, high-level summary of:
-% - proto-field + composite metric setup
-% - induced EH term from fluctuations
-% - construction of composite metric fluctuation h_{\mu\nu}[\Phi]
-% - demonstration of a massless spin--2 pole in its 2-pt function
-% - IR Einstein-like dynamics and coupling to matter
+We investigate the microscopic origin of the tensor sector in the proto--field
+gravity model (PFGM), where spacetime geometry and its kinetic term emerge from
+a single real scalar field with a rank--one disformal composite metric
+\( g^{\rm eff}_{\mu\nu}[\Phi] = \eta_{\mu\nu} + \alpha\,\partial_\mu\Phi\,\partial_\nu\Phi \).
+Building on previous work where an Einstein--Hilbert term and higher--curvature
+corrections are induced by integrating out proto--field fluctuations, we ask
+whether the microscopic Hilbert space actually contains a genuine spin--2
+excitation that can be identified as a composite graviton.
+
+On simple but nontrivial backgrounds with a constant proto--field gradient we
+construct a composite metric fluctuation operator
+\( h_{\mu\nu}[\Phi] \equiv \delta g^{\rm eff}_{\mu\nu}[\Phi] \) and derive
+its two--point function from the quadratic proto--field action.  We show that
+the corresponding momentum--space correlator admits a spin decomposition with a
+massless spin--2 pole of positive residue in the transverse--traceless sector,
+while scalar admixtures are either massive or parametrically suppressed in the
+infrared.  In the induced--gravity window where the Einstein--Hilbert term
+dominates over \(R^2\) and \(C^2\) operators, the linearised equations of motion
+for this TT sector reduce to an Einstein--like wave equation sourced by the
+standard stress--energy tensor, up to controlled higher--derivative corrections.
+
+These results demonstrate that PFGM supports an emergent composite graviton
+with effective dynamics indistinguishable from general relativity at long
+wavelengths, providing a concrete microscopic realisation of a massless
+spin--2 mode built from a single scalar proto--field.
 \end{abstract}
+
 
 \tableofcontents
 
 % =========================================================
 \section{Introduction}
 \label{sec:intro}
-% - Brief recap of PFGM: proto-field, disformal metric, induced EH
-% - The missing piece: microscopic origin of tensor modes
-% - Goal: identify a composite graviton operator with a genuine spin--2 pole
-% - Strategy: background-field split, composite metric fluctuations, 2-pt function
-% - Main results (list bullet points)
-% - Structure of the paper
+
+The proto--field gravity model (PFGM) proposes that both spacetime geometry and
+its dynamical kinetic term emerge from a single real scalar ``proto--field''
+propagating on a fixed Minkowski background.  The effective geometry is
+encoded in a rank--one disformal composite metric
+\begin{equation}
+  g^{\rm eff}_{\mu\nu}[\Phi] = \eta_{\mu\nu}
+  + \alpha\,\partial_\mu\Phi\,\partial_\nu\Phi,
+\end{equation}
+and matter is minimally coupled to \(g^{\rm eff}_{\mu\nu}\).  Previous work has
+shown that fluctuations of the proto--field can induce an Einstein--Hilbert
+term and higher--curvature corrections for \(g^{\rm eff}_{\mu\nu}\), with
+phenomenologically acceptable parameters and a viable weak--field limit.  In
+particular, the PFGM framework has been tested against post--Newtonian
+constraints, binary dynamics, and mesoscopic dark--matter phenomenology in a
+series of companion papers.
+
+A key conceptual question, however, remains open: what is the microscopic
+origin of the tensor sector?  At the level of the induced gravitational
+effective action, the theory contains an Einstein--Hilbert term and behaves
+like general relativity in the infrared, but this does not by itself guarantee
+that the underlying Hilbert space of the proto--field theory contains a
+genuine massless spin--2 excitation.  In other words, we would like to know
+whether there exists a composite operator built from \(\Phi\) whose
+two--point function exhibits the characteristic tensor projector structure and
+massless pole of a graviton, and whether this emergent spin--2 mode obeys
+Einstein--like dynamics in the regime where the induced Einstein--Hilbert term
+dominates.
+
+The purpose of this paper is to address this microscopic question within the
+PFGM setup.  Working on simple but nontrivial backgrounds with a constant
+proto--field gradient, we construct a composite metric fluctuation operator
+\(h_{\mu\nu}[\Phi]\equiv \delta g^{\rm eff}_{\mu\nu}[\Phi]\), derive its
+two--point function from the quadratic proto--field action, and analyse its
+spin content.  We show that the transverse--traceless sector of the
+\(\langle h h\rangle\) correlator contains a massless spin--2 pole with
+positive residue, while scalar admixtures are either massive or suppressed in
+the infrared.  We then connect this composite operator to the induced
+Einstein--Hilbert action and demonstrate that, in the appropriate low--energy
+window, the linearised equations of motion for the transverse--traceless
+sector reduce to an Einstein--like wave equation sourced by the standard
+stress--energy tensor.
 
 \subsection{Motivation and context}
 \label{subsec:intro_motivation}
-% - Why emergent gravity from a scalar?
-% - Relation to induced gravity and emergent EH scenarios
-% - Connection to previous PFGM papers (I--IV, dark matter, mesoscopic halos)
+
+Emergent and induced gravity scenarios have long sought to explain the
+Einstein--Hilbert action and its massless spin--2 excitations as effective
+phenomena arising from more fundamental microscopic degrees of freedom.
+Examples range from Sakharov--type induced gravity to analogue gravity systems
+and various compositeness proposals for the graviton.  The PFGM framework adds
+a particularly economical realisation: a single scalar field with a disformal
+composite metric and a healthy higher--derivative microscopic action.  In
+earlier work, the focus was on deriving the induced gravitational action,
+establishing the existence of a viable Einstein--Hilbert term and constraining
+higher--curvature operators using post--Newtonian and strong--field tests.
+
+From this perspective, the present paper fills an important conceptual gap.  It
+provides a concrete demonstration that the scalar proto--field can support an
+emergent tensor sector whose long--wavelength dynamics are indistinguishable
+from those of general relativity, and it clarifies how the effective
+diffeomorphism invariance of the induced action is realised in terms of
+underlying scalar degrees of freedom.
 
 \subsection{Summary of results}
 \label{subsec:intro_summary}
-% - Existence of composite h_{\mu\nu}[\Phi] with massless spin--2 pole
-% - IR Einstein-like dynamics with induced EH term
-% - Absence of ghosts in the tensor sector
-% - Background dependence and limitations
+
+The main results of this paper can be summarised as follows:
+\begin{itemize}[leftmargin=*]
+  \item We construct a composite metric fluctuation operator
+  \(h_{\mu\nu}[\Phi]\equiv \delta g^{\rm eff}_{\mu\nu}[\Phi]\) on backgrounds
+  with a constant proto--field gradient and derive the quadratic action for
+  proto--field fluctuations propagating on the corresponding effective metric.
+  \item Using the resulting propagator, we compute the momentum--space
+  two--point function \(\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\rangle\) and
+  decompose it into standard spin projectors.  We show that the
+  transverse--traceless sector exhibits a massless spin--2 pole with positive
+  residue, while scalar components are either massive or parametrically
+  suppressed in the infrared.
+  \item We relate the normalisation of the massless spin--2 pole to the
+  effective Planck scale appearing in the induced Einstein--Hilbert term,
+  thereby identifying the composite graviton of PFGM with the tensor mode of
+  the induced gravitational effective action.
+  \item In the window where the induced Einstein--Hilbert term dominates over
+  higher--curvature corrections, we derive the linearised equations of motion
+  for the transverse--traceless sector and show that they reduce to an
+  Einstein--like wave equation sourced by the standard stress--energy tensor,
+  with controlled higher--derivative corrections.
+  \item We discuss degrees of freedom and emergent gauge structure, clarifying
+  how the two physical tensor polarisations arise from the underlying scalar
+  dynamics and under which conditions the effective diffeomorphism invariance
+  is a good symmetry.
+\end{itemize}
 
 \subsection{Organisation of the paper}
 \label{subsec:intro_organisation}
-% - Short paragraph describing each section
 
+The remainder of the paper is organised as follows.
+In \cref{sec:setup} we briefly review the microscopic proto--field action and
+the disformal composite metric, and summarise the induced Einstein--Hilbert
+term and its regime of validity.  In \cref{sec:backgrounds} we introduce the
+backgrounds of interest and the fluctuation decomposition of the proto--field.
+In \cref{sec:composite_fluctuations} we construct the composite metric
+fluctuation operator and derive the quadratic action and propagator for the
+proto--field.  In \cref{sec:spin2_propagator} we compute the composite
+\(\langle h h\rangle\) correlator, perform the spin decomposition, and isolate
+the massless spin--2 pole.  In \cref{sec:linearised_dynamics} we connect this
+composite graviton to the induced Einstein--Hilbert action and derive the
+linearised equations of motion and coupling to matter in the infrared.  In
+\cref{sec:DOF_gauge} we discuss degrees of freedom and emergent gauge
+structure.  Finally, in \cref{sec:discussion,sec:outlook} we place our results
+in the broader context of emergent gravity scenarios and outline directions
+for future work.
 
-% =========================================================
 \section{Proto--field setup and composite metric}
 \label{sec:setup}
-% - Define microscopic action, P(X) + quartic derivative term
-% - Disformal composite metric g^{eff}_{\mu\nu}[\Phi]
-% - Induced EH and higher-curvature terms from integrating out fluctuations
+
+In this section we briefly review the microscopic proto--field action, the
+disformal composite metric to which matter is coupled, and the structure of the
+induced gravitational effective action.  The emphasis is on fixing notation and
+summarising those aspects of the setup that are directly relevant for the
+emergent spin--2 sector studied in later sections.
 
 \subsection{Microscopic proto--field action}
 \label{subsec:setup_action}
-% - Define X, P(X), stabilising term, parameter ranges
-% - Healthy band and background conditions (link to previous work)
+
+The fundamental degree of freedom is a single real scalar field \(\Phi\)
+propagating on a fixed Minkowski background \(\eta_{\mu\nu}\).  Its microscopic
+action is of \(P(X)\) type, augmented by a stabilising quartic derivative term
+that ensures the existence of a healthy band of backgrounds,
+\begin{equation}
+  S_\Phi = \int \mathrm{d}^4x\,
+  \bigg[ P(X) + \frac{\beta_2}{\Lambda^4}
+   (\partial_\mu\partial_\nu\Phi\,\partial^\mu\partial^\nu\Phi) \bigg],
+  \qquad
+  X \equiv -\frac12\,\eta^{\mu\nu}\partial_\mu\Phi\,\partial_\nu\Phi,
+\end{equation}
+where \(P(X)\) is a smooth function with suitable derivatives in the regime of
+interest, \(\beta_2\) is a dimensionless coefficient, and \(\Lambda\) denotes a
+microscopic scale controlling the onset of higher--derivative corrections.
+The second term is written schematically; in practice only a particular
+combination of quartic structures is needed to achieve stability, but its
+detailed form will not be important in what follows.
+
+We assume that there exists a ``healthy band'' of backgrounds for which small
+fluctuations of \(\Phi\) are free of ghosts and gradient instabilities.  In
+terms of the \(P(X)\) sector alone this typically requires
+\begin{equation}
+  P'(X_0) > 0,
+  \qquad
+  P'(X_0) + 2X_0 P''(X_0) > 0,
+\end{equation}
+where \(X_0\) is the value of \(X\) evaluated on the background solution
+\(\Phi_0\).  The quartic term controlled by \(\beta_2\) can then be tuned to
+ensure hyperbolicity and to avoid strong coupling in the fluctuation sector,
+as discussed in more detail in the induced--gravity analysis.
 
 \subsection{Disformal composite metric and effective geometry}
 \label{subsec:setup_metric}
-% - Define g^{\rm eff}_{\mu\nu} = \eta_{\mu\nu} + \alpha \partial_\mu\Phi \partial_\nu\Phi
-% - Discuss rank--one structure and causal properties
-% - Inverse metric, determinant, and basic identities
 
-\subsection{Induced Einstein--Hilbert term and IR EFT}
+The effective geometry seen by matter is encoded in a rank--one disformal
+composite metric built from the proto--field gradient,
+\begin{equation}
+  g^{\rm eff}_{\mu\nu}[\Phi]
+  = \eta_{\mu\nu} + \alpha\,\partial_\mu\Phi\,\partial_\nu\Phi,
+\end{equation}
+with \(\alpha\) a constant parameter of mass dimension \(-4\).  This metric is
+invertible as long as \(1 + \alpha\,\partial_\lambda\Phi\,\partial^\lambda\Phi
+\neq 0\).  For later use it is convenient to write the inverse metric as
+\begin{equation}
+  g_{\rm eff}^{\mu\nu}
+  = \eta^{\mu\nu}
+  - \frac{\alpha}{1+\alpha\,(\partial\Phi)^2}
+    \,\partial^\mu\Phi\,\partial^\nu\Phi,
+  \qquad
+  (\partial\Phi)^2 \equiv \eta^{\rho\sigma}\partial_\rho\Phi\,\partial_\sigma\Phi,
+\end{equation}
+and the determinant as
+\begin{equation}
+  \sqrt{-g_{\rm eff}} = \sqrt{-\eta}\,
+  \big[1 + \alpha\,(\partial\Phi)^2\big]^{1/2},
+\end{equation}
+where \(\sqrt{-\eta}=1\) in Cartesian coordinates on Minkowski space.
+
+Matter fields \(\Psi_{\rm m}\) are assumed to be minimally coupled to the
+composite metric \(g^{\rm eff}_{\mu\nu}\),
+\begin{equation}
+  S_{\rm m}[g^{\rm eff},\Psi_{\rm m}]
+  = \int \mathrm{d}^4x\,\sqrt{-g_{\rm eff}}\,
+    \mathcal{L}_{\rm m}\big(g^{\rm eff}_{\mu\nu},\Psi_{\rm m}\big),
+\end{equation}
+so that their stress--energy tensor is defined in the usual way with respect to
+\(g^{\rm eff}_{\mu\nu}\).  This choice ensures that any emergent tensor mode
+constructed from \(g^{\rm eff}_{\mu\nu}\) will couple universally to matter in
+the low--energy regime, provided the induced gravitational action for
+\(g^{\rm eff}_{\mu\nu}\) takes the Einstein--Hilbert form.
+
+\subsection{Induced Einstein--Hilbert term and IR effective theory}
 \label{subsec:setup_induced_EH}
-% - Summarise one-loop/heat-kernel result: EH + R^2 + C^2 + ...
-% - Effective Planck mass and induced gravitational couplings
-% - Validity window for the IR EFT
 
+Integrating out proto--field fluctuations around a given background generates
+an effective action for the composite metric \(g^{\rm eff}_{\mu\nu}\).  At
+one--loop order, and within the healthy band described above, the leading
+geometric terms take the schematic form
+\begin{equation}
+  S_{\rm grav}^{\rm eff}[g^{\rm eff}]
+  = \int \mathrm{d}^4x\,\sqrt{-g_{\rm eff}}\,
+    \bigg[ \frac{\Mpl^2}{2}\,R[g^{\rm eff}]
+           + c_1 R^2[g^{\rm eff}] + c_2 C^2[g^{\rm eff}]
+           + \cdots \bigg],
+\end{equation}
+where \(R\) is the Ricci scalar, \(C^2\) denotes the square of the Weyl tensor,
+\(\Mpl\) is an induced Planck mass, and the ellipsis stands for higher--order
+curvature invariants and nonlocal contributions suppressed at low energies.
+The coefficients \(\Mpl^2,c_1,c_2,\ldots\) are calculable functions of the
+microscopic parameters of the proto--field theory and of the background value
+of \(X\).
 
-% =========================================================
+In the regime where curvatures and momenta are small compared to the scale set
+by \(|c_{1,2}|/\Mpl^2\), the Einstein--Hilbert term dominates and the
+gravitational dynamics are well approximated by general relativity with
+effective Planck mass \(\Mpl\).  Previous work has shown that, for suitable
+choices of microscopic parameters, this induced--gravity effective theory
+passes standard weak--field and post--Newtonian tests, and admits nontrivial
+mesoscopic behaviour relevant to dark--matter phenomenology.  In the present
+paper we focus on the microscopic origin of the tensor sector associated with
+the induced Einstein--Hilbert term, and in particular on the identification of
+a composite graviton operator built from the proto--field.
+
 \section{Backgrounds and fluctuation decomposition}
 \label{sec:backgrounds}
 % - Choose simple backgrounds where disformal structure is nontrivial
