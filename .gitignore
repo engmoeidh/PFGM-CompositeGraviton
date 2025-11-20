@@ -1,0 +1,27 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.log
+*.lox
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# PDFs
+*.pdf
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+
+# Python / virtualenv (if later used)
+.venv/
+__pycache__/
+*.pyc

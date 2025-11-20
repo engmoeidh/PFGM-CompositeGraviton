@@ -1,0 +1,402 @@
+\documentclass[11pt]{article}
+
+% ========== Packages ==========
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+% ========== Macros (minimal, extend as needed) ==========
+\newcommand{\Geff}{g^{\mathrm{eff}}_{\mu\nu}}
+\newcommand{\Geffinv}{g_{\mathrm{eff}}^{\mu\nu}}
+\newcommand{\geff}{g_{\mathrm{eff}}}
+\newcommand{\Mpl}{M_{\mathrm{Pl}}}
+\newcommand{\Boxg}{\Box_{g_{\mathrm{eff}}}}
+\newcommand{\PofX}{P(X)}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\mpl}{M_{\mathrm{Pl}}}
+\newcommand{\calO}{\mathcal{O}}
+
+\crefname{section}{Sec.}{Secs.}
+\crefname{appendix}{App.}{Apps.}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{table}{Table}{Tables}
+
+% ========== Title ==========
+\title{Proto--Field Gravity V:\\
+Emergent Spin--2 Sector and Composite Graviton}
+\author{Moeidh M.~Hanash}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% Short, high-level summary of:
+% - proto-field + composite metric setup
+% - induced EH term from fluctuations
+% - construction of composite metric fluctuation h_{\mu\nu}[\Phi]
+% - demonstration of a massless spin--2 pole in its 2-pt function
+% - IR Einstein-like dynamics and coupling to matter
+\end{abstract}
+
+\tableofcontents
+
+% =========================================================
+\section{Introduction}
+\label{sec:intro}
+% - Brief recap of PFGM: proto-field, disformal metric, induced EH
+% - The missing piece: microscopic origin of tensor modes
+% - Goal: identify a composite graviton operator with a genuine spin--2 pole
+% - Strategy: background-field split, composite metric fluctuations, 2-pt function
+% - Main results (list bullet points)
+% - Structure of the paper
+
+\subsection{Motivation and context}
+\label{subsec:intro_motivation}
+% - Why emergent gravity from a scalar?
+% - Relation to induced gravity and emergent EH scenarios
+% - Connection to previous PFGM papers (I--IV, dark matter, mesoscopic halos)
+
+\subsection{Summary of results}
+\label{subsec:intro_summary}
+% - Existence of composite h_{\mu\nu}[\Phi] with massless spin--2 pole
+% - IR Einstein-like dynamics with induced EH term
+% - Absence of ghosts in the tensor sector
+% - Background dependence and limitations
+
+\subsection{Organisation of the paper}
+\label{subsec:intro_organisation}
+% - Short paragraph describing each section
+
+
+% =========================================================
+\section{Proto--field setup and composite metric}
+\label{sec:setup}
+% - Define microscopic action, P(X) + quartic derivative term
+% - Disformal composite metric g^{eff}_{\mu\nu}[\Phi]
+% - Induced EH and higher-curvature terms from integrating out fluctuations
+
+\subsection{Microscopic proto--field action}
+\label{subsec:setup_action}
+% - Define X, P(X), stabilising term, parameter ranges
+% - Healthy band and background conditions (link to previous work)
+
+\subsection{Disformal composite metric and effective geometry}
+\label{subsec:setup_metric}
+% - Define g^{\rm eff}_{\mu\nu} = \eta_{\mu\nu} + \alpha \partial_\mu\Phi \partial_\nu\Phi
+% - Discuss rank--one structure and causal properties
+% - Inverse metric, determinant, and basic identities
+
+\subsection{Induced Einstein--Hilbert term and IR EFT}
+\label{subsec:setup_induced_EH}
+% - Summarise one-loop/heat-kernel result: EH + R^2 + C^2 + ...
+% - Effective Planck mass and induced gravitational couplings
+% - Validity window for the IR EFT
+
+
+% =========================================================
+\section{Backgrounds and fluctuation decomposition}
+\label{sec:backgrounds}
+% - Choose simple backgrounds where disformal structure is nontrivial
+% - Perform background-field split \Phi = \Phi_0 + \chi
+% - Introduce canonical fluctuation \psi and its operator
+
+\subsection{Constant-gradient background on Minkowski}
+\label{subsec:bg_constant_gradient}
+% - \Phi_0 = q_\mu x^\mu, q_\mu = const
+% - Effective metric: g^{eff}_{\mu\nu}[\Phi_0] = \eta_{\mu\nu} + \alpha q_\mu q_\nu
+% - Choice of frame q_\mu = (q,0,0,0) and properties
+
+\subsection{Cosmological (FRW-like) background}
+\label{subsec:bg_FRW}
+% - Optional: \Phi_0(t) and homogeneous FRW metric
+% - Comment on extension of results beyond Minkowski + grad
+
+\subsection{Healthy band and stability conditions}
+\label{subsec:bg_healthy_band}
+% - Recall conditions for absence of ghosts and gradient instabilities
+% - Constraints on P'(X), P''(X), quartic term, etc.
+
+
+% =========================================================
+\section{Composite metric fluctuations}
+\label{sec:composite_fluctuations}
+% - Define fluctuations of the composite metric in terms of \chi
+% - Derive quadratic action for \chi (or canonical \psi)
+% - Identify composite h_{\mu\nu}[\Phi] operator
+
+\subsection{Background-field split and canonical fluctuation}
+\label{subsec:fluct_split}
+% - \Phi = \Phi_0 + \chi, relation to canonically normalised \psi
+% - Quadratic expansion of microscopic action around \Phi_0
+% - Kinetic operator and principal symbol
+
+\subsection{Linearised composite metric}
+\label{subsec:fluct_linear_metric}
+% - Expand g^{eff}_{\mu\nu}[\Phi] to linear order in \chi:
+%   h_{\mu\nu} \equiv \delta g^{eff}_{\mu\nu}[\chi]
+% - Express h_{\mu\nu} in terms of q_\mu and \partial_\mu \chi on chosen background
+% - Discuss symmetries and gauge redundancy (if any) at this stage
+
+\subsection{Quadratic action and proto--field propagator}
+\label{subsec:fluct_quadratic_action}
+% - Write S^{(2)}[\chi;\Phi_0] (or \psi) on the background
+% - Derive momentum-space propagator for \chi (or \psi)
+% - Identify effective mass/dispersion and IR regime of interest
+
+
+% =========================================================
+\section{Emergent spin--2 propagator}
+\label{sec:spin2_propagator}
+% - Construct 2-pt function of h_{\mu\nu}
+% - Decompose into spin projectors
+% - Isolate massless spin--2 pole and discuss residue/sign
+
+\subsection{Proto--field propagator on constant-gradient background}
+\label{subsec:spin2_chi_prop}
+% - Write \langle \chi(k) \chi(-k) \rangle
+% - Comment on modifications vs pure Minkowski (if any)
+
+\subsection{Composite \texorpdfstring{$hh$}{hh} correlator in momentum space}
+\label{subsec:spin2_hh_correlator}
+% - Define h_{\mu\nu}(x) from \chi and compute \langle h h \rangle
+% - Leading Gaussian approximation and Wick contractions
+% - Structure of tensor indices in momentum space
+
+\subsection{Spin decomposition and projectors}
+\label{subsec:spin2_projectors}
+% - Introduce transverse projector \theta_{\mu\nu}
+% - Define spin--2, spin--1, and spin--0 projectors \mathcal{P}^{(2)}, \mathcal{P}^{(1)}, ...
+% - Decompose \langle h h \rangle into A(k^2)\mathcal{P}^{(2)} + B(k^2)\mathcal{P}^{(1)} + ...
+
+\subsection{Massless spin--2 pole and residue}
+\label{subsec:spin2_massless_pole}
+% - Show A(k^2) \sim Z_2 / k^2 in the IR, with Z_2 > 0
+% - Interpret Z_2 in terms of effective Planck mass / coupling
+% - Discuss robustness under small deformations of background
+
+\subsection{Scalar sector and absence of ghosts}
+\label{subsec:spin2_scalar_sector}
+% - Analyse B(k^2), C(k^2), D(k^2) for scalar/spin--1 pieces
+% - Show no massless scalar ghost pole at k^2 = 0
+% - Comment on massive scalar excitations and IR suppression
+
+\subsection{Spectral representation and positivity}
+\label{subsec:spin2_spectral}
+% - Optional short, main-text summary of Källén--Lehmann representation
+% - Presence of delta-function in \rho_2(\mu^2) at \mu^2 = 0
+% - Positivity constraints; details in an appendix
+
+
+% =========================================================
+\section{Linearised dynamics and coupling to matter}
+\label{sec:linearised_dynamics}
+% - Connect composite h_{\mu\nu}[\Phi] to induced EH action
+% - Derive linearised equations in IR
+% - Show Einstein-like TT dynamics and standard coupling to T_{\mu\nu}
+
+\subsection{Induced Einstein--Hilbert action and higher-curvature terms}
+\label{subsec:lin_EH_R2}
+% - Write effective action: EH + R^2 + C^2 + ...
+% - Discuss IR window where EH dominates and higher-curvature terms are small
+
+\subsection{Linearised equations and gauge choice}
+\label{subsec:lin_equations}
+% - Linearise around background g^{eff}_{\mu\nu} = \bar{g}_{\mu\nu}
+% - Choose de Donder/harmonic gauge
+% - Derive equation for h_{\mu\nu} in momentum space (including higher-curvature corrections)
+
+\subsection{Transverse-traceless sector and wave equation}
+\label{subsec:lin_TT_sector}
+% - Project onto TT sector: h^{\rm TT}_{\mu\nu}
+% - Show \Box h^{\rm TT}_{\mu\nu} \simeq 0 in IR
+% - Estimate size of corrections from R^2/C^2 operators
+
+\subsection{Coupling to matter and GR limit}
+\label{subsec:lin_coupling_matter}
+% - Introduce matter coupled to g^{eff}_{\mu\nu}
+% - Show linear coupling h^{\mu\nu} T_{\mu\nu}
+% - Recover GR-like relation in IR:
+%   \Box h^{\rm TT}_{\mu\nu} \sim 8\pi G_{\mathrm{eff}} T^{\rm TT}_{\mu\nu}
+
+
+% =========================================================
+\section{Degrees of freedom and emergent gauge structure}
+\label{sec:DOF_gauge}
+% - Count DOFs in proto-field description vs emergent metric description
+% - Clarify role of emergent diffeomorphism invariance at low energies
+
+\subsection{Degrees of freedom in the proto--field description}
+\label{subsec:DOF_proto}
+% - Naive DOF counting for real scalar \Phi
+% - Constraints from equations of motion and stability
+
+\subsection{Mapping to metric degrees of freedom}
+\label{subsec:DOF_metric}
+% - Relation between \delta\Phi and \delta g^{eff}_{\mu\nu}
+% - How many independent components of h_{\mu\nu}[\Phi] are actually dynamical?
+
+\subsection{Emergent diffeomorphisms in the IR}
+\label{subsec:DOF_emergent_diff}
+% - Effective action is diffeo invariant in g^{eff}_{\mu\nu}
+% - Gauge redundancy reduces metric DOFs to 2 TT modes
+% - Interpretation in terms of composite graviton built from \Phi
+
+\subsection{Background dependence and limitations}
+\label{subsec:DOF_limitations}
+% - Where does emergent gauge structure hold? (e.g. healthy band, near-flat backgrounds)
+% - Limitations: strong gradients, beyond EFT cutoff, nonperturbative regimes
+
+
+% =========================================================
+\section{Discussion}
+\label{sec:discussion}
+% - Interpret main results qualitatively
+% - Compare to other emergent gravity / induced gravity scenarios
+% - Highlight novelty: explicit composite graviton operator with spin--2 pole
+
+\subsection{Comparison with previous PFGM results}
+\label{subsec:disc_PFGM}
+% - Relation to Papers I--III (PN tests, strong-field structure)
+% - Relation to cosmological constant solution and mesoscopic halos
+% - How emergent spin--2 mode fits into the global PFGM picture
+
+\subsection{Relation to other emergent gravity frameworks}
+\label{subsec:disc_other_frameworks}
+% - Brief comparison with Sakharov-like induced gravity, analogue gravity, etc.
+% - Similarities and differences in microscopic degrees of freedom
+
+\subsection{Conceptual implications}
+\label{subsec:disc_conceptual}
+% - What it means for the graviton to be composite
+% - Comments on UV completion, unitarity, and locality
+
+
+% =========================================================
+\section{Outlook}
+\label{sec:outlook}
+% - Future directions and open questions
+
+\subsection{Extensions to cosmology and inhomogeneous backgrounds}
+\label{subsec:outlook_cosmo}
+% - Generalisation to FRW, late-time cosmology
+% - Impact on tensor modes / primordial gravitational waves
+
+\subsection{Beyond linear order: interactions and non-Gaussianities}
+\label{subsec:outlook_interactions}
+% - Higher-point functions of h_{\mu\nu}[\Phi]
+% - Self-interactions and departures from GR at nonlinear level
+
+\subsection{Links to mesoscopic halos and dark matter phenomenology}
+\label{subsec:outlook_mesoscopic}
+% - Possible interplay between composite graviton sector and mesoscopic coherence scale
+% - How this feeds into dark-matter/halo phenomenology in other PFGM papers
+
+\subsection{Open problems}
+\label{subsec:outlook_open_problems}
+% - List of concrete technical and conceptual questions left for future work
+
+
+% =========================================================
+\appendix
+
+\section{Conventions and spin projectors}
+\label{app:conventions_projectors}
+% - Metric signature, Fourier conventions
+% - Definition of \theta_{\mu\nu}, \omega_{\mu\nu}
+% - Explicit forms of \mathcal{P}^{(2)}, \mathcal{P}^{(1)}, \mathcal{P}^{(0-s)}, \mathcal{P}^{(0-w)}
+% - Useful identities for projector algebra
+
+\subsection{Fourier conventions and kinematics}
+\label{app:conv_fourier}
+% - Define Fourier transform and momentum-space measures
+
+\subsection{Projector algebra}
+\label{app:conv_proj_algebra}
+% - Orthogonality and completeness relations among projectors
+
+% ---------------------------------------------------------
+\section{Quadratic action and proto--field propagator}
+\label{app:quad_action}
+% - Detailed expansion of P(X) + quartic term to second order
+% - Canonical normalisation and dispersion relation
+
+\subsection{Expansion around constant-gradient background}
+\label{app:quad_const_grad}
+% - Explicit expressions for coefficients in quadratic operator
+
+\subsection{Dispersion relation and healthy band}
+\label{app:quad_dispersion}
+% - Derive dispersion relation and conditions for stability
+
+% ---------------------------------------------------------
+\section{Composite \texorpdfstring{$hh$}{hh} correlator: detailed derivation}
+\label{app:hh_correlator}
+% - Step-by-step calculation of \langle h_{\mu\nu}(k) h_{\rho\sigma}(-k) \rangle
+% - Wick contractions, tensor structures, and symmetries
+
+\subsection{Wick contractions and tensor structures}
+\label{app:hh_wick}
+% - Show how q_\mu, k_\mu, and \eta_{\mu\nu} enter the correlator
+
+\subsection{Extraction of spin coefficients}
+\label{app:hh_spin_coeffs}
+% - Project onto \mathcal{P}^{(2)}, \mathcal{P}^{(1)}, \mathcal{P}^{(0)} to obtain A(k^2), B(k^2), C(k^2), D(k^2)
+
+% ---------------------------------------------------------
+\section{Spectral representation and positivity}
+\label{app:spectral}
+% - Källén--Lehmann representation for \langle h h \rangle
+% - Identification of \rho_2(\mu^2) and \rho_0(\mu^2)
+
+\subsection{Källén--Lehmann representation}
+\label{app:spectral_KL}
+% - General formulas for tensor operators
+
+\subsection{Spectral densities and positivity bounds}
+\label{app:spectral_bounds}
+% - Show \rho_2(\mu^2) has a positive delta at \mu^2 = 0
+% - Discuss constraints on \rho_0(\mu^2)
+
+% ---------------------------------------------------------
+\section{Alternative backgrounds and robustness checks}
+\label{app:alt_backgrounds}
+% - Explore small curvature / FRW background
+% - Check that the spin--2 pole persists under mild deformations
+
+\subsection{Perturbative curvature corrections}
+\label{app:alt_curvature}
+% - Treat curvature as small parameter; sketch impact on propagator
+
+\subsection{Homogeneous time-dependent background}
+\label{app:alt_FRW}
+% - Briefly outline modifications in a FRW-like setup
+
+% ---------------------------------------------------------
+\section{Connection to induced-gravity EFT constraints}
+\label{app:induced_constraints}
+% - Summarise parameter constraints from previous PFGM/induced-EH analyses
+% - Map them to allowed region for emergent spin--2 sector
+
+\subsection{Bounds from Solar-System and binary tests}
+\label{app:induced_bounds}
+% - Recall relevant limits on coefficients of higher-curvature terms
+
+\subsection{Implications for composite graviton parameters}
+\label{app:induced_implications}
+% - How these bounds translate to Z_2, G_{\mathrm{eff}}, etc.
+
+% =========================================================
+\bibliographystyle{unsrt}
+\bibliography{PFGM-CompositeGraviton} % adjust .bib name as needed
+
+\end{document}
