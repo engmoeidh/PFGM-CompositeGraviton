@@ -788,20 +788,140 @@ emergent composite graviton in the proto--field gravity model.
 
 \section{Conventions and spin projectors}
 \label{app:conventions_projectors}
-% - Metric signature, Fourier conventions
-% - Definition of \theta_{\mu\nu}, \omega_{\mu\nu}
-% - Explicit forms of \mathcal{P}^{(2)}, \mathcal{P}^{(1)}, \mathcal{P}^{(0-s)}, \mathcal{P}^{(0-w)}
-% - Useful identities for projector algebra
+
+In this appendix we collect the conventions and tensor projectors used for the
+spin decomposition of the composite metric fluctuation two--point function.
+Throughout the paper we work with a background metric
+\(\bar g_{\mu\nu} = \mathrm{diag}(-1,1,1,1)\) and adopt the convention that
+indices are raised and lowered with \(\bar g_{\mu\nu}\).  Repeated indices are
+summed over and we use the mostly--plus signature.
 
 \subsection{Fourier conventions and kinematics}
 \label{app:conv_fourier}
-% - Define Fourier transform and momentum-space measures
+
+For any field \(f(x)\) on the constant--gradient background we define its
+Fourier transform by
+\begin{equation}
+  f(x) = \int \frac{\mathrm{d}^4k}{(2\pi)^4}\,
+  \mathrm{e}^{\mathrm{i}k\cdot x}\,f(k),
+  \qquad
+  k\cdot x \equiv k_\mu x^\mu,
+\end{equation}
+with inverse
+\begin{equation}
+  f(k) = \int \mathrm{d}^4x\,
+  \mathrm{e}^{-\mathrm{i}k\cdot x}\,f(x).
+\end{equation}
+The invariant momentum norm is defined by
+\begin{equation}
+  k^2 \equiv \bar g^{\mu\nu}k_\mu k_\nu = -k_0^2 + \mathbf{k}^2,
+\end{equation}
+and we restrict attention to momenta with \(k^2\neq 0\) when defining projectors
+that involve \(1/k^2\).  In the timelike--gradient frame used in the main text
+the spatial rotation group acts in the standard way on the three--vector
+\(\mathbf{k}\).
 
 \subsection{Projector algebra}
 \label{app:conv_proj_algebra}
-% - Orthogonality and completeness relations among projectors
 
-% ---------------------------------------------------------
+On a flat background with metric \(\bar g_{\mu\nu}\) the tensor structure of a
+symmetric rank--2 operator can be conveniently analysed using projectors
+constructed from the momentum \(k_\mu\).  We define the transverse and
+longitudinal projectors
+\begin{equation}
+  \theta_{\mu\nu}
+  = \bar g_{\mu\nu} - \frac{k_\mu k_\nu}{k^2},
+  \qquad
+  \omega_{\mu\nu}
+  = \frac{k_\mu k_\nu}{k^2},
+\end{equation}
+which satisfy
+\begin{equation}
+  \theta_{\mu\nu}k^\nu = 0,
+  \qquad
+  \omega_{\mu\nu}k^\nu = k_\mu,
+  \qquad
+  \theta_{\mu\nu} + \omega_{\mu\nu} = \bar g_{\mu\nu}.
+\end{equation}
+They obey the algebra
+\begin{equation}
+  \theta_\mu{}^\lambda \theta_{\lambda\nu} = \theta_{\mu\nu},
+  \qquad
+  \omega_\mu{}^\lambda \omega_{\lambda\nu} = \omega_{\mu\nu},
+  \qquad
+  \theta_\mu{}^\lambda \omega_{\lambda\nu} = 0,
+\end{equation}
+so that \(\theta_{\mu\nu}\) and \(\omega_{\mu\nu}\) act as complementary
+projectors onto the subspaces transverse and parallel to \(k_\mu\),
+respectively.
+
+From these building blocks one can construct projectors onto the spin--2,
+spin--1, and spin--0 components of a symmetric rank--2 tensor.  A convenient
+set of orthogonal projectors in four dimensions is
+\begin{align}
+  \mathcal{P}^{(2)}_{\mu\nu\rho\sigma}
+  &= \frac12\big(
+      \theta_{\mu\rho}\theta_{\nu\sigma}
+    + \theta_{\mu\sigma}\theta_{\nu\rho}
+    \big)
+    - \frac13\,\theta_{\mu\nu}\theta_{\rho\sigma}, \\
+  \mathcal{P}^{(1)}_{\mu\nu\rho\sigma}
+  &= \frac12\big(
+      \theta_{\mu\rho}\omega_{\nu\sigma}
+    + \theta_{\mu\sigma}\omega_{\nu\rho}
+    + \theta_{\nu\rho}\omega_{\mu\sigma}
+    + \theta_{\nu\sigma}\omega_{\mu\rho}
+    \big), \\
+  \mathcal{P}^{(0\text{-s})}_{\mu\nu\rho\sigma}
+  &= \frac13\,\theta_{\mu\nu}\theta_{\rho\sigma}, \\
+  \mathcal{P}^{(0\text{-w})}_{\mu\nu\rho\sigma}
+  &= \omega_{\mu\nu}\omega_{\rho\sigma}.
+\end{align}
+These projectors act on the space of symmetric rank--2 tensors and obey the
+orthogonality relations
+\begin{equation}
+  \mathcal{P}^{(i)}_{\mu\nu}{}^{\alpha\beta}
+  \mathcal{P}^{(j)}_{\alpha\beta\rho\sigma}
+  = \delta^{ij}
+    \mathcal{P}^{(i)}_{\mu\nu\rho\sigma},
+  \qquad
+  i,j \in \{2,1,0\text{-s},0\text{-w}\},
+\end{equation}
+as well as the completeness relation
+\begin{equation}
+  \mathcal{P}^{(2)}_{\mu\nu\rho\sigma}
+  + \mathcal{P}^{(1)}_{\mu\nu\rho\sigma}
+  + \mathcal{P}^{(0\text{-s})}_{\mu\nu\rho\sigma}
+  + \mathcal{P}^{(0\text{-w})}_{\mu\nu\rho\sigma}
+  = \frac12\big(
+      \bar g_{\mu\rho}\bar g_{\nu\sigma}
+    + \bar g_{\mu\sigma}\bar g_{\nu\rho}
+    \big),
+\end{equation}
+which is the identity operator on the space of symmetric rank--2 tensors.
+
+Given any two--point function of a symmetric tensor operator
+\(h_{\mu\nu}(k)\), the coefficient functions in the decomposition
+\begin{equation}
+  \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle
+  = A(k^2)\,\mathcal{P}^{(2)}_{\mu\nu\rho\sigma}
+  + B(k^2)\,\mathcal{P}^{(1)}_{\mu\nu\rho\sigma}
+  + C(k^2)\,\mathcal{P}^{(0\text{-s})}_{\mu\nu\rho\sigma}
+  + D(k^2)\,\mathcal{P}^{(0\text{-w})}_{\mu\nu\rho\sigma}
+\end{equation}
+can be obtained by contracting with the corresponding projectors.  For
+instance,
+\begin{equation}
+  A(k^2)
+  = \frac{1}{\mathcal{N}_2}\,
+    \mathcal{P}^{(2)\,\mu\nu\rho\sigma}
+    \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle,
+\end{equation}
+with \(\mathcal{N}_2\) a normalisation factor fixed by the projector algebra,
+and analogous expressions for \(B(k^2)\), \(C(k^2)\), and \(D(k^2)\).  These
+relations underlie the spin decomposition used in
+\cref{sec:spin2_propagator,app:hh_spin_coeffs}.
+
 \section{Quadratic action and proto--field propagator}
 \label{app:quad_action}
 % - Detailed expansion of P(X) + quartic term to second order
