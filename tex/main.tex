@@ -924,18 +924,172 @@ relations underlie the spin decomposition used in
 
 \section{Quadratic action and proto--field propagator}
 \label{app:quad_action}
-% - Detailed expansion of P(X) + quartic term to second order
-% - Canonical normalisation and dispersion relation
+
+In this appendix we summarise the quadratic action for proto--field
+fluctuations around the constant--gradient background introduced in
+\cref{subsec:bg_constant_gradient}, and record the associated stability
+inequalities.  These results underlie the discussion of the healthy band of
+backgrounds and parameters in the main text and provide the starting point for
+the construction of the composite graviton propagator.
 
 \subsection{Expansion around constant-gradient background}
 \label{app:quad_const_grad}
-% - Explicit expressions for coefficients in quadratic operator
+
+We consider the microscopic proto--field action
+\begin{equation}
+  S_\Phi = \int \mathrm{d}^4x\,
+  \bigg[ P(X) + \frac{\beta_2}{\Lambda^4}
+   (\partial_\mu\partial_\nu\Phi\,\partial^\mu\partial^\nu\Phi) \bigg],
+  \qquad
+  X \equiv -\frac12\,\eta^{\mu\nu}\partial_\mu\Phi\,\partial_\nu\Phi,
+\end{equation}
+and expand around a constant--gradient background
+\begin{equation}
+  \Phi(x) = \Phi_0(x) + \chi(x),
+  \qquad
+  \Phi_0(x) = q_\mu x^\mu,
+\end{equation}
+with \(q_\mu\) constant.  On this background the kinetic invariant takes the
+constant value
+\begin{equation}
+  X_0 = -\frac12\,\eta^{\mu\nu}q_\mu q_\nu.
+\end{equation}
+Fluctuations of \(X\) can be expanded as
+\begin{equation}
+  X = X_0 + \delta X + \delta^2 X + \cdots,
+\end{equation}
+where
+\begin{equation}
+  \delta X
+  = -\eta^{\mu\nu}\partial_\mu\Phi_0\,\partial_\nu\chi
+  = -q^\mu\partial_\mu\chi,
+  \qquad
+  \delta^2 X
+  = -\frac12\,\eta^{\mu\nu}\partial_\mu\chi\,\partial_\nu\chi.
+\end{equation}
+Expanding the \(P(X)\) part of the action to quadratic order in \(\chi\) yields
+\begin{equation}
+  P(X)
+  = P(X_0) + P'(X_0)\,\delta X
+    + \frac12 P''(X_0)\,(\delta X)^2
+    + P'(X_0)\,\delta^2 X + \cdots.
+\end{equation}
+The term linear in \(\chi\) vanishes when the background satisfies the
+field equation, and the quadratic Lagrangian density from the \(P(X)\) sector
+takes the form
+\begin{equation}
+  \mathcal{L}^{(2)}_{P(X)}
+  = \frac12 \Big[
+      P''(X_0)\,(q^\mu\partial_\mu\chi)^2
+    - P'(X_0)\,\eta^{\mu\nu}\partial_\mu\chi\,\partial_\nu\chi
+    \Big].
+\end{equation}
+In the timelike--gradient frame \(q_\mu=(q,0,0,0)\) this can be written as
+\begin{equation}
+  \mathcal{L}^{(2)}_{P(X)}
+  = \frac12 Z_t\,(\partial_0\chi)^2
+    - \frac12 Z_s\,\delta^{ij}\partial_i\chi\,\partial_j\chi,
+\end{equation}
+with
+\begin{equation}
+  Z_t = P'(X_0) + 2X_0 P''(X_0),
+  \qquad
+  Z_s = P'(X_0),
+\end{equation}
+and \(X_0 = \tfrac12 q^2\) in this frame.
+
+The quartic derivative term proportional to \(\beta_2\) contributes additional
+quadratic terms involving second derivatives of \(\chi\).  Schematically, one
+finds contributions of the form
+\begin{equation}
+  \mathcal{L}^{(2)}_{\beta_2}
+  = \frac{\beta_2}{\Lambda^4}
+    \Big[
+      a_1\,(\partial_0^2\chi)^2
+      + a_2\,(\partial_0\partial_i\chi)^2
+      + a_3\,(\partial_i\partial_j\chi)^2
+    \Big],
+\end{equation}
+with dimensionless coefficients \(a_{1,2,3}\) determined by the detailed
+structure of the quartic operator and the background.  The precise form of
+these coefficients is not needed for the present discussion; what matters is
+that they are suppressed by \(\Lambda^{-4}\) and become relevant only at
+momenta comparable to or larger than \(\Lambda\).
+
+Collecting the contributions from the \(P(X)\) sector and the quartic term, the
+quadratic action around the constant--gradient background can be written in the
+schematic form
+\begin{equation}
+  S^{(2)}[\chi;\Phi_0]
+  = \frac12\int \mathrm{d}^4x\,\sqrt{-\bar g}\,
+     \chi\,\mathcal{D}[\bar g,\Phi_0]\,\chi,
+\end{equation}
+with \(\bar g_{\mu\nu} = g^{\rm eff}_{\mu\nu}[\Phi_0]\) the constant composite
+metric defined in \cref{subsec:bg_constant_gradient} and
+\(\mathcal{D}[\bar g,\Phi_0]\) a differential operator whose leading,
+second--order part has principal symbol controlled by the effective coefficients
+\(Z_t\) and \(Z_s\), together with higher--derivative corrections suppressed by
+\(\Lambda^{-4}\).
 
 \subsection{Dispersion relation and healthy band}
 \label{app:quad_dispersion}
-% - Derive dispersion relation and conditions for stability
 
-% ---------------------------------------------------------
+In momentum space, and neglecting quartic derivative terms at low momenta, the
+quadratic action derived above leads to an effective dispersion relation of the
+form
+\begin{equation}
+  Z_t\,\omega^2
+  - Z_s\,\mathbf{k}^2
+  - M_{\rm eff}^2 + \mathcal{O}\!\left(\frac{k^4}{\Lambda^2}\right)
+  = 0,
+\end{equation}
+where \(k^\mu = (\omega,\mathbf{k})\) and \(M_{\rm eff}^2\) denotes an
+effective mass term that arises once potential contributions and interactions
+with other sectors are included.  The leading--order phase velocity of small
+fluctuations is given by
+\begin{equation}
+  c_s^2
+  = \frac{Z_s}{Z_t}
+  = \frac{P'(X_0)}{P'(X_0)+2X_0 P''(X_0)}.
+\end{equation}
+The absence of ghosts requires a positive kinetic coefficient,
+\begin{equation}
+  Z_t = P'(X_0)+2X_0 P''(X_0) > 0,
+\end{equation}
+while the absence of gradient instabilities demands
+\begin{equation}
+  c_s^2 > 0
+  \quad\Longleftrightarrow\quad
+  P'(X_0) > 0.
+\end{equation}
+These conditions ensure that, at low energies where quartic derivative terms
+are negligible, the small fluctuations of \(\chi\) around the background
+propagate with a real, positive sound speed and carry positive kinetic energy.
+
+The quartic derivative term modifies the dispersion relation at higher momenta,
+introducing corrections of order \(k^4/\Lambda^2\) and beyond.  Provided that
+\(|\beta_2|\) is chosen such that these corrections do not change the sign of
+the kinetic term or the principal symbol in the regime of interest, the theory
+remains hyperbolic and free of Ostrogradski instabilities up to the cutoff
+scale.  A detailed analysis of these conditions, including the explicit form of
+\(M_{\rm eff}^2\) and the role of the quartic operator, is given in
+Refs.~\cite{Hanash:PFGM-I,Hanash:Induced-EH}.  There it is shown that the
+microscopic parameters of the proto--field theory admit a nonempty region in
+which
+\begin{equation}
+  Z_t > 0,
+  \qquad
+  Z_s > 0,
+  \qquad
+  c_s^2 > 0,
+\end{equation}
+and the induced--gravity effective theory passes standard weak--field tests.
+In the main text we restrict attention to constant--gradient backgrounds
+belonging to this healthy band, for which the propagator of \(\chi\) is
+well--defined and can be used to construct the composite metric fluctuation and
+its two--point function as described in
+\cref{sec:composite_fluctuations,sec:spin2_propagator}.
+
 \section{Composite \texorpdfstring{$hh$}{hh} correlator: detailed derivation}
 \label{app:hh_correlator}
 % - Step-by-step calculation of \langle h_{\mu\nu}(k) h_{\rho\sigma}(-k) \rangle
