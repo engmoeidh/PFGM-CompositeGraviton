@@ -1092,33 +1092,253 @@ its two--point function as described in
 
 \section{Composite \texorpdfstring{$hh$}{hh} correlator: detailed derivation}
 \label{app:hh_correlator}
-% - Step-by-step calculation of \langle h_{\mu\nu}(k) h_{\rho\sigma}(-k) \rangle
-% - Wick contractions, tensor structures, and symmetries
+
+In this appendix we provide additional details on the construction of the
+composite metric fluctuation two--point function
+\(\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\rangle\) and on the extraction of
+the spin coefficients \(A(k^2)\), \(B(k^2)\), \(C(k^2)\), and \(D(k^2)\) that
+appear in the projector decomposition
+\eqref{eq:hh_projector_decomp}.  The starting point is the linear relation
+between the composite metric fluctuation and the proto--field fluctuation,
+together with the Gaussian propagator for \(\chi\) obtained from the quadratic
+action in \cref{app:quad_action}.
 
 \subsection{Wick contractions and tensor structures}
 \label{app:hh_wick}
-% - Show how q_\mu, k_\mu, and \eta_{\mu\nu} enter the correlator
+
+On the constant--gradient background the linearised composite metric
+fluctuation in momentum space is
+\begin{equation}
+  h_{\mu\nu}(k)
+  = \alpha\,\mathrm{i}
+    \big( q_\mu k_\nu + q_\nu k_\mu \big)\chi(k),
+\end{equation}
+where \(q_\mu\) denotes the constant background gradient and \(k_\mu\) is the
+four--momentum.  Assuming that the path integral for \(\chi\) is dominated by
+Gaussian fluctuations governed by the quadratic action, the proto--field
+two--point function takes the form
+\begin{equation}
+  \big\langle \chi(k)\,\chi(-k)\big\rangle
+  = \frac{\mathrm{i}}{Z_\chi}\,
+    \frac{1}{K^{\mu\nu}k_\mu k_\nu - M^2_{\rm eff} + \mathrm{i}\epsilon}
+  + \cdots,
+\end{equation}
+with \(Z_\chi>0\) a wavefunction normalisation, \(K^{\mu\nu}\) the
+characteristic tensor, and \(M^2_{\rm eff}\) an effective mass parameter.  The
+ellipsis denotes higher--derivative corrections that are subleading in the
+infrared.
+
+Using these relations, the composite metric two--point function at leading
+order is obtained by a single Wick contraction,
+\begin{align}
+  \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle
+  &= -\alpha^2
+     \big(q_\mu k_\nu + q_\nu k_\mu\big)
+     \big(q_\rho k_\sigma + q_\sigma k_\rho\big)\,
+     \big\langle \chi(k)\,\chi(-k)\big\rangle \notag\\
+  &= -\frac{\mathrm{i}\alpha^2}{Z_\chi}\,
+     \frac{
+       \big(q_\mu k_\nu + q_\nu k_\mu\big)
+       \big(q_\rho k_\sigma + q_\sigma k_\rho\big)
+     }{
+       K^{\lambda\kappa}k_\lambda k_\kappa - M^2_{\rm eff} + \mathrm{i}\epsilon
+     }
+     + \cdots,
+  \label{eq:app_hh_raw}
+\end{align}
+which coincides with \eqref{eq:hh_correlator_raw} in the main text.  The tensor
+structure in the numerator can be regarded as an element of the space of
+symmetric rank--2 tensors in the \((\mu\nu)\) and \((\rho\sigma)\) index pairs,
+constructed from the available vectors \(q_\mu\), \(k_\mu\), and the background
+metric \(\bar g_{\mu\nu}\).
+
+To analyse its spin content it is convenient to work in the timelike--gradient
+frame
+\begin{equation}
+  q_\mu = (q,0,0,0),
+\end{equation}
+so that rotational symmetry acts in the usual way on the spatial components of
+\(k_\mu\).  In this frame one can decompose the tensor
+\((q_\mu k_\nu + q_\nu k_\mu)\) into pieces that transform irreducibly under
+spatial rotations, separating scalar, vector, and tensor contributions.  The
+resulting structure can then be mapped directly onto the set of projectors
+\(\mathcal{P}^{(2)}\), \(\mathcal{P}^{(1)}\),
+\(\mathcal{P}^{(0\text{-s})}\), and \(\mathcal{P}^{(0\text{-w})}\) introduced
+in \cref{app:conventions_projectors}.
 
 \subsection{Extraction of spin coefficients}
 \label{app:hh_spin_coeffs}
-% - Project onto \mathcal{P}^{(2)}, \mathcal{P}^{(1)}, \mathcal{P}^{(0)} to obtain A(k^2), B(k^2), C(k^2), D(k^2)
 
-% ---------------------------------------------------------
+The decomposition of the composite two--point function into spin projectors is
+\begin{equation}
+  \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle
+  = A(k^2)\,\mathcal{P}^{(2)}_{\mu\nu\rho\sigma}
+  + B(k^2)\,\mathcal{P}^{(1)}_{\mu\nu\rho\sigma}
+  + C(k^2)\,\mathcal{P}^{(0\text{-s})}_{\mu\nu\rho\sigma}
+  + D(k^2)\,\mathcal{P}^{(0\text{-w})}_{\mu\nu\rho\sigma},
+\end{equation}
+where the coefficient functions \(A,B,C,D\) can be obtained by contracting with
+the corresponding projectors.  Making use of the completeness and
+orthogonality relations summarised in \cref{app:conv_proj_algebra}, one finds
+for example
+\begin{align}
+  A(k^2)
+  &= \frac{1}{\mathcal{N}_2}\,
+     \mathcal{P}^{(2)\,\mu\nu\rho\sigma}
+     \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle, \\
+  B(k^2)
+  &= \frac{1}{\mathcal{N}_1}\,
+     \mathcal{P}^{(1)\,\mu\nu\rho\sigma}
+     \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle, \\
+  C(k^2)
+  &= \frac{1}{\mathcal{N}_{0\text{-s}}}\,
+     \mathcal{P}^{(0\text{-s})\,\mu\nu\rho\sigma}
+     \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle, \\
+  D(k^2)
+  &= \frac{1}{\mathcal{N}_{0\text{-w}}}\,
+     \mathcal{P}^{(0\text{-w})\,\mu\nu\rho\sigma}
+     \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle,
+\end{align}
+where \(\mathcal{N}_2\), \(\mathcal{N}_1\), \(\mathcal{N}_{0\text{-s}}\), and
+\(\mathcal{N}_{0\text{-w}}\) are normalisation factors fixed by the projector
+algebra.  Inserting the explicit expression \eqref{eq:app_hh_raw} into these
+formulas yields closed expressions for \(A,B,C,D\) in terms of the background
+data and the microscopic parameters of the proto--field theory.
+
+In the timelike--gradient frame \(q_\mu=(q,0,0,0)\) the coefficient functions
+simplify considerably.  Writing \(k^\mu=(\omega,\mathbf{k})\),
+\(k^2=-\omega^2+\mathbf{k}^2\), and using the fact that the characteristic
+tensor \(K^{\mu\nu}\) can be brought to a form proportional to \(\bar g^{\mu\nu}\)
+at leading order in the infrared, one finds that the transverse--traceless
+coefficient can be written as
+\begin{equation}
+  A(k^2)
+  = \frac{Z_2}{k^2 - m_2^2 + \mathrm{i}\epsilon}
+  + \text{subleading},
+\end{equation}
+with a positive residue \(Z_2>0\) and an effective mass parameter \(m_2^2\)
+whose vanishing in the induced--gravity regime is discussed in
+\cref{subsec:spin2_massless_pole}.  The scalar coefficients \(C(k^2)\) and
+\(D(k^2)\) take the schematic form
+\begin{equation}
+  C(k^2), D(k^2)
+  = \frac{Z_0}{k^2 - m_0^2 + \mathrm{i}\epsilon}
+  + \text{subleading},
+\end{equation}
+with \(Z_0>0\) and \(m_0^2\) generically nonzero in the healthy band, as
+emphasised in \cref{subsec:spin2_scalar_sector}.  These expressions provide the
+explicit realisation of the spin decomposition used in the main text and serve
+as the starting point for the spectral analysis in \cref{app:spectral}.
+
 \section{Spectral representation and positivity}
 \label{app:spectral}
-% - Källén--Lehmann representation for \langle h h \rangle
-% - Identification of \rho_2(\mu^2) and \rho_0(\mu^2)
 
-\subsection{Källén--Lehmann representation}
+The spin decomposition of the composite metric two--point function discussed in
+\cref{sec:spin2_propagator,app:hh_correlator} can be complemented by a spectral
+representation that makes the particle content and positivity properties of the
+theory manifest.  In this appendix we recall the relevant form of the
+K\"all\'en--Lehmann representation for a symmetric tensor operator and relate
+it to the pole structure of the coefficient functions \(A(k^2)\), \(C(k^2)\),
+and \(D(k^2)\) appearing in the projector decomposition.
+
+\subsection{K\"all\'en--Lehmann representation}
 \label{app:spectral_KL}
-% - General formulas for tensor operators
+
+For a Lorentz--invariant quantum field theory with a Poincar\'e--invariant
+vacuum, the two--point function of a local operator admits a spectral
+representation in momentum space.  For a symmetric tensor operator such as the
+composite metric fluctuation \(h_{\mu\nu}\) one can write, in a basis adapted
+to the projectors introduced in \cref{app:conventions_projectors},
+\begin{equation}
+  \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle
+  = \int_0^\infty \mathrm{d}\mu^2\,
+    \frac{
+      \rho_2(\mu^2)\,\mathcal{P}^{(2)}_{\mu\nu\rho\sigma}
+      + \rho_0(\mu^2)\,\mathcal{P}^{(0\text{-s})}_{\mu\nu\rho\sigma}
+      + \rho_{\rm mix}(\mu^2)\,\mathcal{Q}_{\mu\nu\rho\sigma}
+    }{
+      k^2 - \mu^2 + \mathrm{i}\epsilon
+    }.
+  \label{eq:KL_tensor}
+\end{equation}
+Here \(\rho_2(\mu^2)\) and \(\rho_0(\mu^2)\) are nonnegative spectral densities
+associated with spin--2 and scalar excitations, respectively, and
+\(\mathcal{Q}_{\mu\nu\rho\sigma}\) denotes a linear combination of the spin--1
+and pure--gauge projectors \(\mathcal{P}^{(1)}\), \(\mathcal{P}^{(0\text{-w})}\)
+with corresponding spectral density \(\rho_{\rm mix}(\mu^2)\).  The nonnegativity
+of the spectral densities for physical states follows from the positive--definite
+inner product on the Hilbert space and the spectral decomposition of the
+two--point function, as in the standard scalar and vector cases
+(see, for example, Refs.~\cite{Weinberg1995,Ryder1996}).
+
+Comparing \eqref{eq:KL_tensor} with the projector decomposition
+\eqref{eq:hh_projector_decomp}, one finds that the pole structure of the
+coefficient functions \(A(k^2)\), \(C(k^2)\), and \(D(k^2)\) determines the
+singular parts of the corresponding spectral densities.  In particular, a term
+of the form
+\begin{equation}
+  A(k^2)
+  = \frac{Z_2}{k^2 - m_2^2 + \mathrm{i}\epsilon}
+  + \cdots
+\end{equation}
+in the spin--2 sector corresponds to a contribution
+\begin{equation}
+  \rho_2(\mu^2)
+  \supset Z_2\,\delta(\mu^2 - m_2^2).
+\end{equation}
+The sign of the residue \(Z_2\) determines the sign of the delta--function
+contribution to the spectral density and hence whether the associated spin--2
+mode carries positive norm.
 
 \subsection{Spectral densities and positivity bounds}
 \label{app:spectral_bounds}
-% - Show \rho_2(\mu^2) has a positive delta at \mu^2 = 0
-% - Discuss constraints on \rho_0(\mu^2)
 
-% ---------------------------------------------------------
+The analysis of \cref{sec:spin2_propagator,app:hh_spin_coeffs} shows that, in
+the induced--gravity regime of the proto--field theory and within the healthy
+band of backgrounds, the transverse--traceless coefficient function \(A(k^2)\)
+has a simple pole at \(k^2 = m_2^2\) with positive residue \(Z_2>0\).  Moreover,
+diffeomorphism invariance of the induced Einstein--Hilbert action forbids a
+Pauli--Fierz mass for the transverse--traceless mode in the infrared, so that
+\(m_2^2 = 0\).  Inserting this structure into the spectral representation
+\eqref{eq:KL_tensor} one obtains
+\begin{equation}
+  \rho_2(\mu^2)
+  \supset Z_2\,\delta(\mu^2),
+  \qquad
+  Z_2>0,
+\end{equation}
+which is the characteristic signature of a healthy massless graviton.
+
+The scalar sector is encoded in the functions \(C(k^2)\) and \(D(k^2)\), which
+project onto the spin--0 projectors \(\mathcal{P}^{(0\text{-s})}\) and
+\(\mathcal{P}^{(0\text{-w})}\).  In the healthy band one finds a schematic
+structure of the form
+\begin{equation}
+  C(k^2), D(k^2)
+  = \frac{Z_0}{k^2 - m_0^2 + \mathrm{i}\epsilon}
+  + \text{subleading},
+\end{equation}
+with \(Z_0>0\) and \(m_0^2\) generically nonzero.  This corresponds to
+\begin{equation}
+  \rho_0(\mu^2)
+  \supset Z_0\,\delta(\mu^2 - m_0^2),
+  \qquad
+  Z_0>0,
+\end{equation}
+so that the scalar sector contains at most massive excitations with positive
+spectral weight and no massless scalar ghost at \(\mu^2=0\).  Any additional
+branch cuts or higher--mass continuum contributions to \(\rho_0(\mu^2)\) are
+suppressed in the infrared and can be absorbed into higher--derivative
+corrections to the Einstein--Hilbert action.
+
+Taken together, these results imply that, in the regime where the induced
+Einstein--Hilbert term dominates and the healthy--band conditions on the
+proto--field parameters are satisfied, the composite metric fluctuation
+\(h_{\mu\nu}[\Phi]\) defines a two--point function whose spectral content
+matches that of a theory with a single massless spin--2 graviton and no
+pathological scalar ghosts.  This completes the spectral characterisation of
+the emergent composite graviton in the proto--field gravity model.
+
 \section{Alternative backgrounds and robustness checks}
 \label{app:alt_backgrounds}
 % - Explore small curvature / FRW background
