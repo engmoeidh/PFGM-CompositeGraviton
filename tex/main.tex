@@ -1341,30 +1341,199 @@ the emergent composite graviton in the proto--field gravity model.
 
 \section{Alternative backgrounds and robustness checks}
 \label{app:alt_backgrounds}
-% - Explore small curvature / FRW background
-% - Check that the spin--2 pole persists under mild deformations
+
+The explicit construction of the composite graviton in the main text was
+carried out on a constant--gradient background, for which the effective metric
+\(\bar g_{\mu\nu} = g^{\rm eff}_{\mu\nu}[\Phi_0]\) is flat and momentum--space
+methods are particularly transparent.  In this appendix we comment on the
+robustness of the emergent spin--2 sector under mild deformations of the
+background, focusing on homogeneous FRW--like configurations and small
+curvature corrections.
 
 \subsection{Perturbative curvature corrections}
 \label{app:alt_curvature}
-% - Treat curvature as small parameter; sketch impact on propagator
+
+Consider a background in which the effective metric deviates slightly from flat
+Minkowski space,
+\begin{equation}
+  g^{\rm eff}_{\mu\nu}[\Phi_0]
+  = \bar g_{\mu\nu} + \delta g^{\rm eff}_{\mu\nu},
+  \qquad
+  \|\delta g^{\rm eff}_{\mu\nu}\| \ll 1,
+\end{equation}
+with curvature invariants small compared to the scale set by the induced
+gravity coefficients,
+\begin{equation}
+  |R|\ll \frac{M_{\rm Pl}^2}{|c_1|},
+  \qquad
+  |C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma}|\ll
+  \frac{M_{\rm Pl}^4}{c_2^2},
+\end{equation}
+where \(M_{\rm Pl}\) and \(c_{1,2}\) are the parameters appearing in the
+induced gravitational action of \cref{subsec:setup_induced_EH}.  In this
+regime the quadratic operator for proto--field fluctuations can be treated
+perturbatively around its flat--background form, and the corresponding
+propagator receives corrections suppressed by powers of the dimensionless
+quantities \(|R|/M_{\rm Pl}^2\) and \(|C^2|/(M_{\rm Pl}^4/|c_2|^2)\).
+
+The composite metric fluctuation operator \(h_{\mu\nu}[\Phi]\) inherits these
+small corrections through its dependence on \(\chi\) and on the background
+derivatives of \(\Phi_0\).  To leading order in curvature, the structure of the
+transverse--traceless two--point function remains of the form
+\begin{equation}
+  \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle_{\rm TT}
+  \simeq \frac{Z_2}{k^2 + \mathrm{i}\epsilon}\,
+    \mathcal{P}^{(2)}_{\mu\nu\rho\sigma}
+  + \mathcal{O}\!\left(\frac{R}{M_{\rm Pl}^2},
+                       \frac{C^2}{M_{\rm Pl}^4/|c_2|^2}\right),
+\end{equation}
+where the corrections can be organised in a derivative expansion and absorbed
+into higher--curvature operators in the induced effective action.  As long as
+the background remains within the regime of validity of the induced--gravity
+EFT, the presence of a massless spin--2 pole with positive residue in the
+transverse--traceless sector is therefore robust under small curvature
+deformations.
 
 \subsection{Homogeneous time-dependent background}
 \label{app:alt_FRW}
-% - Briefly outline modifications in a FRW-like setup
 
-% ---------------------------------------------------------
+A particularly relevant class of backgrounds for cosmological applications is
+provided by homogeneous time--dependent proto--field configurations,
+\begin{equation}
+  \Phi_0 = \Phi_0(t),
+  \qquad
+  \partial_i\Phi_0 = 0,
+\end{equation}
+for which the composite metric takes the spatially homogeneous and isotropic
+form
+\begin{equation}
+  \mathrm{d}s^2
+  = g^{\rm eff}_{\mu\nu}[\Phi_0]\,
+    \mathrm{d}x^\mu\mathrm{d}x^\nu
+  = -A(t)\,\mathrm{d}t^2
+    + B(t)\,\delta_{ij}\,\mathrm{d}x^i\mathrm{d}x^j,
+\end{equation}
+with lapse function \(A(t)\) and scale factor \(B^{1/2}(t)\) determined by the
+background solution \(\Phi_0(t)\) and the microscopic parameters.  Linearised
+tensor perturbations around this FRW--like geometry can be decomposed into
+transverse--traceless modes \(h^{\rm TT}_{ij}(t,\mathbf{x})\) satisfying the
+usual conditions \(h^{\rm TT}_{ii}=0\), \(\partial_i h^{\rm TT}_{ij}=0\).
+
+In the regime where the induced Einstein--Hilbert term dominates over
+curvature--squared operators, the quadratic action for these tensor modes
+reduces to the standard form familiar from cosmological perturbation theory,
+with a kinetic term proportional to the induced Planck mass and a spatial
+gradient term controlled by the effective light cone of \(g^{\rm eff}_{\mu\nu}\).
+The microscopic analysis of the composite graviton on the constant--gradient
+background indicates that the tensorial degrees of freedom in this FRW--like
+setting can likewise be identified with composite operators built from the
+proto--field, with dynamics governed by an effectively massless spin--2 mode in
+the long--wavelength limit.  A detailed treatment of cosmological tensor modes
+in PFGM will be presented elsewhere; the purpose of the present appendix is
+simply to indicate that the emergent graviton picture is not tied to a
+particular flat background but extends to mildly curved and homogeneous
+configurations within the induced--gravity regime.
+
 \section{Connection to induced-gravity EFT constraints}
 \label{app:induced_constraints}
-% - Summarise parameter constraints from previous PFGM/induced-EH analyses
-% - Map them to allowed region for emergent spin--2 sector
+
+The emergent composite graviton constructed in the main text arises in a
+framework where the Einstein--Hilbert term and higher--curvature operators are
+induced for the composite metric \(g^{\rm eff}_{\mu\nu}[\Phi]\) by integrating
+out proto--field fluctuations.  In this appendix we summarise the structure of
+the induced gravitational effective action and its phenomenological
+constraints, and we comment on the mapping between these EFT parameters and the
+properties of the composite graviton propagator.
 
 \subsection{Bounds from Solar-System and binary tests}
 \label{app:induced_bounds}
-% - Recall relevant limits on coefficients of higher-curvature terms
+
+As discussed in \cref{subsec:setup_induced_EH}, the induced gravitational
+effective action for the composite metric takes the schematic form
+\begin{equation}
+  S_{\rm grav}^{\rm eff}[g^{\rm eff}]
+  = \int \mathrm{d}^4x\,\sqrt{-g_{\rm eff}}\,
+    \bigg[ \frac{M_{\rm Pl}^2}{2}\,R[g^{\rm eff}]
+           + c_1 R^2[g^{\rm eff}] + c_2 C^2[g^{\rm eff}]
+           + \cdots \bigg],
+  \label{eq:app_induced_EH}
+\end{equation}
+where \(M_{\rm Pl}\) is an induced Planck mass, \(c_1\) and \(c_2\) are
+dimensionful coefficients of curvature--squared operators, and the ellipsis
+denotes higher--order curvature invariants and nonlocal terms that are
+suppressed at low energies.  The coefficients \(M_{\rm Pl}^2,c_1,c_2,\ldots\)
+are calculable functions of the microscopic parameters of the proto--field
+theory and of the background quantity \(X_0\).
+
+In Refs.~\cite{Hanash:PFGM-I,Hanash:Induced-EH} the induced--gravity sector of
+PFGM was analysed in detail and confronted with observational constraints.
+Working in the regime where the Einstein--Hilbert term dominates and treating
+the curvature--squared operators as small corrections, it was shown that there
+exists a nonempty region of parameter space in which:
+\begin{itemize}[leftmargin=*]
+  \item The effective Planck mass \(M_{\rm Pl}\) reproduces the observed value
+  of Newton's constant to within experimental accuracy.
+  \item Post--Newtonian parameters extracted from the weak--field limit of
+  \eqref{eq:app_induced_EH} lie within current Solar--System bounds.
+  \item Higher--curvature corrections do not spoil the agreement with binary
+  dynamics and gravitational--wave observations at the level probed by current
+  data.
+\end{itemize}
+In particular, the coefficients \(c_1\) and \(c_2\) can be chosen such that the
+mass scale associated with the massive spin--2 ghost present in generic
+curvature--squared theories lies above the cutoff of the induced EFT, so that
+this unphysical mode never appears as a propagating degree of freedom in the
+regime where the proto--field description is trusted.
 
 \subsection{Implications for composite graviton parameters}
 \label{app:induced_implications}
-% - How these bounds translate to Z_2, G_{\mathrm{eff}}, etc.
+
+The analysis of \cref{sec:spin2_propagator,app:spectral} shows that the
+transverse--traceless two--point function of the composite metric fluctuation
+can be written, in the infrared and within the healthy band, as
+\begin{equation}
+  \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle_{\rm TT}
+  = \frac{Z_2}{k^2 + \mathrm{i}\epsilon}\,
+    \mathcal{P}^{(2)}_{\mu\nu\rho\sigma}
+  + \cdots,
+\end{equation}
+with a positive residue \(Z_2>0\) and ellipsis denoting subleading
+higher--derivative corrections.  On the other hand, the linearised Einstein
+equations derived from \eqref{eq:app_induced_EH} around a flat background lead
+to the standard massless graviton propagator with residue proportional to
+\(1/M_{\rm Pl}^2\) \cite{Weinberg1995}.  Matching the two descriptions in the
+overlap regime where both the microscopic and the induced--gravity EFT are
+valid therefore implies the identification
+\begin{equation}
+  Z_2 \sim \frac{1}{M_{\rm Pl}^2},
+\end{equation}
+up to convention--dependent numerical factors associated with the precise
+normalisation of \(h_{\mu\nu}\) and of the stress--energy tensor.
+
+This matching has several implications.  First, it shows that the composite
+graviton constructed in this paper is not an independent degree of freedom
+added by hand, but the microscopic realisation of the massless spin--2 mode
+propagating in the induced Einstein--Hilbert sector.  Second, it implies that
+the parameter choices in the healthy band that reproduce the observed value of
+Newton's constant and satisfy Solar--System and gravitational--wave bounds are
+simultaneously those for which the composite graviton couples to matter with
+the correct strength and exhibits Einstein--like dynamics at long wavelengths.
+In other words, the viability of the induced--gravity EFT established in
+Refs.~\cite{Hanash:PFGM-I,Hanash:Induced-EH} directly translates into the
+phenomenological viability of the composite graviton identified here.
+
+Finally, the presence of curvature--squared operators in
+\eqref{eq:app_induced_EH} implies that, at sufficiently high energies or in
+strong--curvature regimes, the propagator of the composite graviton will
+receive corrections that go beyond the simple Einstein--Hilbert form.  These
+corrections are encoded in subleading terms in the coefficient function
+\(A(k^2)\) and in additional contributions to the spectral density at nonzero
+\(\mu^2\).  Provided the associated mass scales lie above the energy range
+probed by current tests of gravity, as indicated by the induced--gravity
+analysis, the emergent composite graviton remains effectively indistinguishable
+from the general--relativistic graviton in all presently accessible regimes,
+while allowing for controlled deviations in ultraviolet or strong--field
+extensions of the PFGM framework.
 
 % =========================================================
 \bibliographystyle{unsrt}
