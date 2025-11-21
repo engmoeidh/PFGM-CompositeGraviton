@@ -831,32 +831,127 @@ investigations.
 
 \section{Degrees of freedom and emergent gauge structure}
 \label{sec:DOF_gauge}
-% - Count DOFs in proto-field description vs emergent metric description
-% - Clarify role of emergent diffeomorphism invariance at low energies
+
+The proto--field gravity model is based on a single real scalar field, whereas
+the massless graviton in general relativity carries two transverse--traceless
+tensor polarisations.  In this section we clarify how these statements are
+compatible.  The key point is that the graviton in PFGM is not introduced as a
+fundamental tensor field, but appears as a genuine \emph{composite bound state}
+of proto--field excitations.  In the microscopic description the only
+fundamental field is the scalar \(\Phi\), but the interacting theory supports a
+richer spectrum of composite excitations, including a massless spin--2 state
+whose two TT polarisations are encoded in the tensor structure of the composite
+metric correlator.  This is directly analogous to the emergence of vector and
+tensor mesons in QCD as poles in the correlators of composite operators built
+from quarks and gluons.
 
 \subsection{Degrees of freedom in the proto--field description}
 \label{subsec:DOF_proto}
-% - Naive DOF counting for real scalar \Phi
-% - Constraints from equations of motion and stability
+
+At the microscopic level the theory contains a single real scalar \(\Phi\) with
+a higher--derivative action of \(P(X)\) type, augmented by a stabilising
+quartic derivative term.  In the healthy band of backgrounds defined in
+\cref{subsec:setup_action,app:quad_dispersion} the quadratic action for
+fluctuations \(\chi\) around a constant--gradient background possesses a single
+propagating mode with a well--behaved dispersion relation.  There are no
+additional fundamental tensorial degrees of freedom in the microscopic
+description.
+
+The composite metric \(g^{\rm eff}_{\mu\nu}[\Phi] = \eta_{\mu\nu} + \alpha
+\partial_\mu\Phi\,\partial_\nu\Phi\) and its fluctuation
+\(h_{\mu\nu}[\Phi]\equiv \delta g^{\rm eff}_{\mu\nu}[\Phi]\) are nonlocal
+functionals of \(\Phi\) and its derivatives.  As such, the fact that the
+two--point function of \(h_{\mu\nu}\) contains a nontrivial transverse--traceless
+spin--2 component does not imply the presence of additional microscopic
+propagating fields.  This is analogous to the familiar situation in ordinary
+field theory where composite operators such as the stress--energy tensor
+\(T_{\mu\nu}\) carry spin--2 quantum numbers even though the underlying
+fundamental fields may be scalars or spinors.
 
 \subsection{Mapping to metric degrees of freedom}
 \label{subsec:DOF_metric}
-% - Relation between \delta\Phi and \delta g^{eff}_{\mu\nu}
-% - How many independent components of h_{\mu\nu}[\Phi] are actually dynamical?
 
-\subsection{Emergent diffeomorphisms in the IR}
+The composite metric fluctuation can be expressed to linear order in \(\chi\) as
+\begin{equation}
+  h_{\mu\nu}(x)
+  = \alpha\big(
+      q_\mu\,\partial_\nu\chi(x)
+    + q_\nu\,\partial_\mu\chi(x)
+    \big),
+\end{equation}
+with \(q_\mu\) the constant background gradient.  This relation is linear in
+\(\chi\) but involves derivatives and the fixed background vector \(q_\mu\),
+which breaks explicit Lorentz invariance down to the subgroup preserving
+\(q_\mu\).  In momentum space the components of \(h_{\mu\nu}(k)\) are therefore
+nontrivial linear combinations of \(\chi(k)\) weighted by factors of \(q_\mu\)
+and \(k_\mu\).
+
+From the point of view of the effective metric description, one can regard
+\(h_{\mu\nu}\) as parametrising fluctuations of \(g^{\rm eff}_{\mu\nu}\) around
+a background \(\bar g_{\mu\nu}\), and organise these fluctuations into scalar,
+vector, and tensor components under spatial rotations.  The emergent
+diffeomorphism invariance of the induced Einstein--Hilbert action then implies
+that many of these components are gauge--redundant.  In particular, in the
+infrared regime where curvature--squared corrections are negligible, the
+effective description in terms of \(g^{\rm eff}_{\mu\nu}\) reduces to that of
+general relativity, in which only the two transverse--traceless tensor
+components of \(h_{\mu\nu}\) represent physical propagating degrees of freedom.
+
+\subsection{Emergent diffeomorphisms in the infrared}
 \label{subsec:DOF_emergent_diff}
-% - Effective action is diffeo invariant in g^{eff}_{\mu\nu}
-% - Gauge redundancy reduces metric DOFs to 2 TT modes
-% - Interpretation in terms of composite graviton built from \Phi
+
+The induced gravitational effective action is invariant under diffeomorphisms
+of the composite metric \(g^{\rm eff}_{\mu\nu}\), even though the microscopic
+proto--field action is written on a fixed Minkowski background.  This emergent
+diffeomorphism invariance arises because the induced dynamics for
+\(g^{\rm eff}_{\mu\nu}\) depend only on covariant quantities such as curvature
+invariants constructed from \(g^{\rm eff}_{\mu\nu}\), and not on the background
+metric \(\eta_{\mu\nu}\) separately.  As a result, at energies well below the
+cutoff of the induced--gravity EFT one can treat \(g^{\rm eff}_{\mu\nu}\) as an
+effective dynamical metric in a diffeomorphism--invariant theory.
+
+In this regime the usual gauge--fixing and constraint analysis of linearised
+gravity applies.  Starting from ten components of \(h_{\mu\nu}\) in four
+dimensions, four diffeomorphism gauge functions and four constraint equations
+eliminate eight combinations, leaving two physical propagating tensor modes.
+The composite graviton identified in \cref{sec:spin2_propagator} lives precisely
+in this transverse--traceless sector.  The fact that \(h_{\mu\nu}\) is built
+from a single microscopic scalar field \(\Phi\) does not alter this effective
+degree--of--freedom counting; it simply reflects the compositeness and
+nonlocality of the emergent metric field.
 
 \subsection{Background dependence and limitations}
 \label{subsec:DOF_limitations}
-% - Where does emergent gauge structure hold? (e.g. healthy band, near-flat backgrounds)
-% - Limitations: strong gradients, beyond EFT cutoff, nonperturbative regimes
 
+The discussion above has been carried out on constant--gradient backgrounds and
+in the induced--gravity regime where the Einstein--Hilbert term dominates and
+emergent diffeomorphism invariance is a good symmetry.  In more general
+backgrounds, or at energies approaching the cutoff of the induced EFT, several
+caveats are in order.
 
-% =========================================================
+First, the mapping between microscopic scalar fluctuations \(\chi\) and the
+effective metric fluctuation \(h_{\mu\nu}\) becomes more complicated on
+inhomogeneous or strongly curved backgrounds, and the separation into scalar,
+vector, and tensor components may receive corrections controlled by background
+gradients and curvature.  Second, higher--derivative terms originating from the
+quartic operator in the proto--field action and from curvature--squared
+operators in the induced gravitational action can modify the dispersion
+relation and mixing pattern of the emergent modes.  In such regimes the simple
+picture of a single massless spin--2 pole plus massive scalar excitations may
+receive significant corrections.
+
+Finally, the analysis presented here focuses on two--point functions and
+linearised dynamics.  A complete microscopic understanding of the emergent
+spin--2 sector would ideally include a detailed study of nonlinear interactions,
+higher--point correlation functions, and the realisation of diffeomorphism
+Ward identities at the level of the proto--field path integral.  These are
+important open problems for future work.  For the purposes of the present
+paper, it suffices to note that in the well--controlled regime of constant
+gradients and small curvature, the composite metric fluctuation
+\(h_{\mu\nu}[\Phi]\) furnishes an emergent tensor sector whose infrared
+propagator and coupling to matter match those of the graviton in the induced
+Einstein--Hilbert theory.
+
 \section{Discussion}
 \label{sec:discussion}
 % - Interpret main results qualitatively
@@ -881,6 +976,35 @@ investigations.
 
 
 % =========================================================
+\subsection{Scope and limitations}
+\label{subsec:disc_scope}
+
+The analysis presented in this paper establishes, on a concrete and calculable
+class of backgrounds, that the scalar proto--field supports a massless spin--2
+composite excitation whose infrared propagator and coupling to matter match
+those of the graviton in an induced Einstein--Hilbert theory.  We construct an
+explicit composite metric operator \(h_{\mu\nu}[\Phi]\), compute its two--point
+function, decompose it into spin projectors, and show that the
+transverse--traceless sector exhibits a massless pole with positive residue and
+Einstein--like dynamics in the induced--gravity regime.  In this sense the
+graviton of PFGM is realised as a composite bound state in the microscopic
+Hilbert space, rather than as an independent fundamental field.
+
+At the same time, several important questions remain open.  Our analysis is
+carried out on constant--gradient and mildly curved backgrounds within the
+healthy band of parameters where the induced Einstein--Hilbert term dominates;
+a fully general treatment of arbitrary backgrounds and strong--curvature
+regimes is left for future work.  We have focused on two--point functions and
+linearised dynamics; a complete microscopic understanding of the emergent
+spin--2 sector would require a more detailed study of nonlinear interactions,
+higher--point correlators, and the implementation of diffeomorphism Ward
+identities at the level of the proto--field path integral.  Finally, while the
+matching to the induced Einstein--Hilbert sector and existing post--Newtonian
+and gravitational--wave constraints indicates that the composite graviton is
+phenomenologically viable in the infrared, a dedicated analysis of waveform
+properties and ultraviolet completion lies beyond the scope of the present
+paper.
+
 \section{Outlook}
 \label{sec:outlook}
 % - Future directions and open questions
