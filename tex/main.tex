@@ -708,6 +708,19 @@ develop a massless ghost pole in the infrared.  The projector algebra and
 the explicit contractions for the composite correlator are summarised in
 \cref{app:conventions_projectors,app:hh_correlator}.
 
+It is worth stressing that the constant--gradient background
+\(q_\mu \neq 0\) breaks exact Lorentz invariance, since it selects a preferred
+timelike direction.  The spin decomposition above is therefore performed with
+respect to the background metric \(\bar g_{\mu\nu}\) and the four--momentum
+\(k_\mu\) of fluctuations, rather than in a fully Lorentz--invariant vacuum.
+In the induced--gravity regime of interest the dynamics of long--wavelength
+modes are nevertheless well described by an approximately
+Lorentz/diffeomorphism--invariant effective field theory for the composite
+metric, so that the use of the standard projector basis and the associated
+tensor structures is appropriate for extracting the physical tensor and scalar
+sectors of the composite correlator.
+
+
 \subsection{Massless spin--2 pole and residue}
 \label{subsec:spin2_massless_pole}
 
@@ -1572,6 +1585,55 @@ its two--point function as described in
   \label{fig:healthy_band}
 \end{figure}
 
+\subsection{Benchmark example in the healthy band}
+\label{app:benchmark_healthy_band}
+
+For concreteness it is useful to exhibit a simple benchmark point in the
+healthy band.  Consider the toy choice
+\begin{equation}
+  P(X) = -\frac12 X + \frac{\lambda}{4} X^2,
+\end{equation}
+with a background value \(X_0 = 1\) and parameter \(\lambda = 2\).  The
+derivatives of \(P\) at the background are
+\begin{equation}
+  P'(X_0) = -\frac12 + \frac{\lambda}{2} X_0
+  = -\frac12 + 1 = 0.5,
+  \qquad
+  P''(X_0) = \frac{\lambda}{2} = 1.0.
+\end{equation}
+In terms of the notation of \cref{app:quad_action}, we therefore have
+\begin{equation}
+  Z_s = P'(X_0) = 0.5,
+  \qquad
+  Z_t = P'(X_0) + 2 X_0 P''(X_0)
+      = 0.5 + 2\cdot 1 \cdot 1 = 2.5,
+\end{equation}
+and the corresponding sound speed is
+\begin{equation}
+  c_s^2 = \frac{Z_s}{Z_t} = \frac{0.5}{2.5} = 0.2.
+\end{equation}
+These values clearly satisfy the healthy--band inequalities
+\begin{equation}
+  Z_t > 0,
+  \qquad
+  Z_s > 0,
+  \qquad
+  c_s^2 > 0,
+\end{equation}
+and \(c_s^2<1\) ensures subluminal propagation at low momenta.  A quartic
+derivative coupling \(\beta_2\) of order unity and a cutoff scale \(\Lambda\)
+can then be chosen such that the higher--derivative terms remain perturbative
+for the momenta of interest, as discussed in \cref{app:quad_dispersion}.
+This benchmark point lies within the numerically determined healthy band in the
+\((P'(X_0),P''(X_0))\) plane shown in
+\cref{fig:healthy_band_scan,tab:healthy_band_stats}, and provides a concrete
+example of a background around which the proto--field fluctuations are stable
+and well described by the induced--gravity effective theory.
+
+\paragraph{}
+In units where the induced Planck mass is set to \(M_{\rm Pl}=1\), the matching
+in \cref{app:induced_implications} then implies a spin--2 residue \(Z_2\) of
+order unity for this benchmark choice.
 
 \section{Composite \texorpdfstring{$hh$}{hh} correlator: detailed derivation}
 \label{app:hh_correlator}
@@ -1836,27 +1898,6 @@ expressions are again lengthy but can be obtained by straightforward algebra.
 Together with the spin--2 analysis above, this completes the explicit spin
 decomposition of the composite metric two--point function.
 
-As a numerical check of the sign and magnitude of the spin--2 coefficient, we
-have evaluated the projector contraction \(F_2(q,k)\) on a representative set
-of timelike background gradients and momenta using the script
-\texttt{scripts/check\_spin2\_structure.py}.  The resulting samples, stored in
-\texttt{data/spin2\_F2\_samples.csv}, are summarised in
-\Cref{fig:spin2_F2_vs_k2,tab:spin2_F2_stats}.
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.6\textwidth]{../figures/fig_spin2_F2_vs_k2}
-  \caption{Sample values of the spin--2 projector contraction
-  \(F_2(q,k)\) as a function of \(k^2\) for a timelike background gradient
-  \(q_\mu\) lying in the healthy band.  All sampled points have positive
-  \(F_2\), in agreement with the analytic structure of
-  \cref{app:hh_spin_coeffs} and the positivity of the spin--2 spectral
-  density discussed in \cref{app:spectral}.}
-  \label{fig:spin2_F2_vs_k2}
-\end{figure}
-
-\input{../results/table_spin2_F2_stats}
-
 \section{Spectral representation and positivity}
 \label{app:spectral}
 
@@ -1897,6 +1938,12 @@ of the spectral densities for physical states follows from the positive--definit
 inner product on the Hilbert space and the spectral decomposition of the
 two--point function, as in the standard scalar and vector cases
 (see, for example, Refs.~\cite{Weinberg1995,Ryder1996}).
+In the present context the constant--gradient background and induced--gravity
+effective description mean that exact microscopic Lorentz invariance is
+broken.  The K\"all\'en--Lehmann representation is therefore used here as a
+formal tool for encoding the spin--2 and spin--0 spectral content of the
+composite correlator in the approximately Lorentz/diffeomorphism--invariant
+infrared effective field theory defined by the induced Einstein--Hilbert term.
 
 Comparing \eqref{eq:KL_tensor} with the projector decomposition
 \eqref{eq:hh_projector_decomp}, one finds that the pole structure of the
