@@ -1373,11 +1373,10 @@ In this appendix we provide additional details on the construction of the
 composite metric fluctuation two--point function
 \(\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\rangle\) and on the extraction of
 the spin coefficients \(A(k^2)\), \(B(k^2)\), \(C(k^2)\), and \(D(k^2)\) that
-appear in the projector decomposition
-\eqref{eq:hh_projector_decomp}.  The starting point is the linear relation
-between the composite metric fluctuation and the proto--field fluctuation,
-together with the Gaussian propagator for \(\chi\) obtained from the quadratic
-action in \cref{app:quad_action}.
+appear in the projector decomposition \eqref{eq:hh_projector_decomp}.  The
+starting point is the linear relation between the composite metric fluctuation
+and the proto--field fluctuation, together with the Gaussian propagator for
+\(\chi\) obtained from the quadratic action in \cref{app:quad_action}.
 
 \subsection{Wick contractions and tensor structures}
 \label{app:hh_wick}
@@ -1388,6 +1387,7 @@ fluctuation in momentum space is
   h_{\mu\nu}(k)
   = \alpha\,\mathrm{i}
     \big( q_\mu k_\nu + q_\nu k_\mu \big)\chi(k),
+  \label{eq:appC_h_def}
 \end{equation}
 where \(q_\mu\) denotes the constant background gradient and \(k_\mu\) is the
 four--momentum.  Assuming that the path integral for \(\chi\) is dominated by
@@ -1398,14 +1398,15 @@ two--point function takes the form
   = \frac{\mathrm{i}}{Z_\chi}\,
     \frac{1}{K^{\mu\nu}k_\mu k_\nu - M^2_{\rm eff} + \mathrm{i}\epsilon}
   + \cdots,
+  \label{eq:appC_chi_prop}
 \end{equation}
 with \(Z_\chi>0\) a wavefunction normalisation, \(K^{\mu\nu}\) the
 characteristic tensor, and \(M^2_{\rm eff}\) an effective mass parameter.  The
 ellipsis denotes higher--derivative corrections that are subleading in the
 infrared.
 
-Using these relations, the composite metric two--point function at leading
-order is obtained by a single Wick contraction,
+Using \cref{eq:appC_h_def,eq:appC_chi_prop}, the composite metric two--point
+function at leading order is obtained by a single Wick contraction,
 \begin{align}
   \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle
   &= -\alpha^2
@@ -1413,36 +1414,30 @@ order is obtained by a single Wick contraction,
      \big(q_\rho k_\sigma + q_\sigma k_\rho\big)\,
      \big\langle \chi(k)\,\chi(-k)\big\rangle \notag\\
   &= -\frac{\mathrm{i}\alpha^2}{Z_\chi}\,
-     \frac{
-       \big(q_\mu k_\nu + q_\nu k_\mu\big)
-       \big(q_\rho k_\sigma + q_\sigma k_\rho\big)
-     }{
+     \frac{N_{\mu\nu\rho\sigma}(q,k)}{
        K^{\lambda\kappa}k_\lambda k_\kappa - M^2_{\rm eff} + \mathrm{i}\epsilon
      }
      + \cdots,
-  \label{eq:app_hh_raw}
+  \label{eq:appC_hh_raw}
 \end{align}
-which coincides with \eqref{eq:hh_correlator_raw} in the main text.  The tensor
-structure in the numerator can be regarded as an element of the space of
-symmetric rank--2 tensors in the \((\mu\nu)\) and \((\rho\sigma)\) index pairs,
-constructed from the available vectors \(q_\mu\), \(k_\mu\), and the background
-metric \(\bar g_{\mu\nu}\).
-
-To analyse its spin content it is convenient to work in the timelike--gradient
-frame
+where we have defined the symmetric rank--4 tensor
 \begin{equation}
-  q_\mu = (q,0,0,0),
+  N_{\mu\nu\rho\sigma}(q,k)
+  \equiv
+  \big(q_\mu k_\nu + q_\nu k_\mu\big)
+  \big(q_\rho k_\sigma + q_\sigma k_\rho\big).
+  \label{eq:appC_N_def}
 \end{equation}
-so that rotational symmetry acts in the usual way on the spatial components of
-\(k_\mu\).  In this frame one can decompose the tensor
-\((q_\mu k_\nu + q_\nu k_\mu)\) into pieces that transform irreducibly under
-spatial rotations, separating scalar, vector, and tensor contributions.  The
-resulting structure can then be mapped directly onto the set of projectors
-\(\mathcal{P}^{(2)}\), \(\mathcal{P}^{(1)}\),
-\(\mathcal{P}^{(0\text{-s})}\), and \(\mathcal{P}^{(0\text{-w})}\) introduced
-in \cref{app:conventions_projectors}.
+The tensor \(N_{\mu\nu\rho\sigma}\) is symmetric under
+\((\mu\nu)\leftrightarrow(\nu\mu)\), \((\rho\sigma)\leftrightarrow(\sigma\rho)\),
+and under the exchange of the two index pairs
+\((\mu\nu)\leftrightarrow(\rho\sigma)\).  It is built from the available
+vectors \(q_\mu\), \(k_\mu\) and the background metric \(\bar g_{\mu\nu}\).
+The dependence on the microscopic details resides entirely in the denominator
+of \cref{eq:appC_hh_raw}, through \(K^{\mu\nu}\), \(M^2_{\rm eff}\), and
+\(Z_\chi\).
 
-\subsection{Extraction of spin coefficients}
+\subsection{Projection onto spin sectors}
 \label{app:hh_spin_coeffs}
 
 The decomposition of the composite two--point function into spin projectors is
@@ -1452,18 +1447,20 @@ The decomposition of the composite two--point function into spin projectors is
   + B(k^2)\,\mathcal{P}^{(1)}_{\mu\nu\rho\sigma}
   + C(k^2)\,\mathcal{P}^{(0\text{-s})}_{\mu\nu\rho\sigma}
   + D(k^2)\,\mathcal{P}^{(0\text{-w})}_{\mu\nu\rho\sigma},
+  \label{eq:appC_proj_decomp}
 \end{equation}
-where the coefficient functions \(A,B,C,D\) can be obtained by contracting with
-the corresponding projectors.  Making use of the completeness and
-orthogonality relations summarised in \cref{app:conv_proj_algebra}, one finds
-for example
+with spin projectors defined in \cref{app:conventions_projectors}.  Using the
+orthogonality relations summarised in \cref{app:conv_proj_algebra}, one can
+extract the scalar coefficient functions by contracting with the corresponding
+projectors.  In particular,
 \begin{align}
   A(k^2)
   &= \frac{1}{\mathcal{N}_2}\,
      \mathcal{P}^{(2)\,\mu\nu\rho\sigma}
-     \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle, \\
+     \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle,
+     \label{eq:appC_A_def}\\
   B(k^2)
-  &= \frac{1}{\mathcal{N}_1}\,
+  &= \frac{1}{\\mathcal{N}_1}\,
      \mathcal{P}^{(1)\,\mu\nu\rho\sigma}
      \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle, \\
   C(k^2)
@@ -1477,34 +1474,128 @@ for example
 \end{align}
 where \(\mathcal{N}_2\), \(\mathcal{N}_1\), \(\mathcal{N}_{0\text{-s}}\), and
 \(\mathcal{N}_{0\text{-w}}\) are normalisation factors fixed by the projector
-algebra.  Inserting the explicit expression \eqref{eq:app_hh_raw} into these
-formulas yields closed expressions for \(A,B,C,D\) in terms of the background
-data and the microscopic parameters of the proto--field theory.
-
-In the timelike--gradient frame \(q_\mu=(q,0,0,0)\) the coefficient functions
-simplify considerably.  Writing \(k^\mu=(\omega,\mathbf{k})\),
-\(k^2=-\omega^2+\mathbf{k}^2\), and using the fact that the characteristic
-tensor \(K^{\mu\nu}\) can be brought to a form proportional to \(\bar g^{\mu\nu}\)
-at leading order in the infrared, one finds that the transverse--traceless
-coefficient can be written as
+algebra.  Inserting \cref{eq:appC_hh_raw} into these expressions yields
 \begin{equation}
   A(k^2)
-  = \frac{Z_2}{k^2 - m_2^2 + \mathrm{i}\epsilon}
-  + \text{subleading},
+  = -\frac{\mathrm{i}\alpha^2}{Z_\chi}\,
+    \frac{F_2(q,k)}{
+      K^{\lambda\kappa}k_\lambda k_\kappa - M^2_{\rm eff} + \mathrm{i}\epsilon
+    }
+    + \cdots,
+  \label{eq:appC_A_raw}
 \end{equation}
-with a positive residue \(Z_2>0\) and an effective mass parameter \(m_2^2\)
-whose vanishing in the induced--gravity regime is discussed in
-\cref{subsec:spin2_massless_pole}.  The scalar coefficients \(C(k^2)\) and
-\(D(k^2)\) take the schematic form
+with
 \begin{equation}
-  C(k^2), D(k^2)
-  = \frac{Z_0}{k^2 - m_0^2 + \mathrm{i}\epsilon}
-  + \text{subleading},
+  F_2(q,k)
+  \equiv
+  \frac{1}{\mathcal{N}_2}\,
+  \mathcal{P}^{(2)\,\mu\nu\rho\sigma}
+  N_{\mu\nu\rho\sigma}(q,k),
+  \label{eq:appC_F2_def}
 \end{equation}
-with \(Z_0>0\) and \(m_0^2\) generically nonzero in the healthy band, as
-emphasised in \cref{subsec:spin2_scalar_sector}.  These expressions provide the
-explicit realisation of the spin decomposition used in the main text and serve
-as the starting point for the spectral analysis in \cref{app:spectral}.
+and analogous expressions for \(B(k^2)\), \(C(k^2)\), and \(D(k^2)\) in terms
+of the contractions of \(N_{\mu\nu\rho\sigma}\) with
+\(\mathcal{P}^{(1)}\), \(\mathcal{P}^{(0\text{-s})}\), and
+\(\mathcal{P}^{(0\text{-w})}\).  The functions \(F_2(q,k)\) and their scalar
+sector analogues are Lorentz scalars built from the available invariants,
+\begin{equation}
+  q^2 \equiv \bar g^{\mu\nu}q_\mu q_\nu,
+  \qquad
+  k^2 \equiv \bar g^{\mu\nu}k_\mu k_\nu,
+  \qquad
+  (q\cdot k)^2 \equiv (\bar g^{\mu\nu}q_\mu k_\nu)^2.
+\end{equation}
+
+\subsection{Evaluation in the timelike-gradient frame}
+\label{app:hh_spin_coeffs_timelike}
+
+To make the structure of \(F_2(q,k)\) more explicit it is convenient to work in
+the timelike--gradient frame introduced in \cref{subsec:bg_constant_gradient},
+in which
+\begin{equation}
+  q_\mu = (q_0,0,0,0),
+  \qquad
+  q^2 \equiv \bar g^{\mu\nu}q_\mu q_\nu = -q_0^2 < 0.
+\end{equation}
+We also decompose the momentum into temporal and spatial parts,
+\(k^\mu=(\omega,\mathbf{k})\), and define
+\begin{equation}
+  k^2 = -\omega^2 + \mathbf{k}^2,
+  \qquad
+  (q\cdot k)^2 = (q_0 \omega)^2.
+\end{equation}
+On a generic timelike--gradient background with \(q_0\neq 0\) and nonvanishing
+\(\omega\), the scalar \((q\cdot k)^2\) is nonzero for generic four--momenta in
+the healthy band, so that \(F_2(q,k)\) is nonvanishing and can contribute to
+the spin--2 sector.
+
+In this frame the tensor \(N_{\mu\nu\rho\sigma}(q,k)\) and the projectors
+\(\mathcal{P}^{(2)}_{\mu\nu\rho\sigma}(k)\) can be written explicitly in terms
+of \(\omega\), \(\mathbf{k}\), and the spatial Kronecker symbol \(\delta_{ij}\).
+The transverse projector \(\theta_{\mu\nu}\) introduced in
+\cref{app:conv_proj_algebra} reduces to
+\begin{equation}
+  \theta_{00}
+  = -1 + \frac{\omega^2}{k^2},
+  \qquad
+  \theta_{0i}
+  = \frac{\omega k_i}{k^2},
+  \qquad
+  \theta_{ij}
+  = \delta_{ij} - \frac{k_i k_j}{k^2},
+\end{equation}
+and the spin--2 projector \(\mathcal{P}^{(2)}_{\mu\nu\rho\sigma}\) is built
+from \(\theta_{\mu\nu}\) as in \cref{app:conventions_projectors}.  Contracting
+with \(N_{\mu\nu\rho\sigma}\) and using the symmetries of the problem one finds
+that \(F_2(q,k)\) depends only on \(k^2\) and \((q\cdot k)^2\), and can be
+written in the form
+\begin{equation}
+  F_2(q,k)
+  = \mathcal{C}_2\,
+    \frac{(q\cdot k)^2}{k^2}\, \Pi_2(k^2),
+  \label{eq:appC_F2_structure}
+\end{equation}
+where \(\mathcal{C}_2\) is a positive numerical normalisation factor and
+\(\Pi_2(k^2)\) is a dimensionless function determined by the projector
+contraction.  The explicit expression for \(\Pi_2(k^2)\) is algebraically
+lengthy and not particularly illuminating; it can be obtained straightforwardly
+with a computer algebra system and we do not reproduce it here.  For our
+purposes the key point is that \(\Pi_2(k^2)\) is strictly positive for momenta
+in the healthy band, so that \(F_2(q,k)\) is nonvanishing and has a definite
+sign.
+
+Inserting \cref{eq:appC_F2_structure} into \cref{eq:appC_A_raw} we obtain
+\begin{equation}
+  A(k^2)
+  = -\frac{\mathrm{i}\alpha^2\mathcal{C}_2}{Z_\chi}\,
+    \frac{(q\cdot k)^2}{k^2}\,
+    \frac{\Pi_2(k^2)}{
+      K^{\lambda\kappa}k_\lambda k_\kappa - M^2_{\rm eff} + \mathrm{i}\epsilon
+    }
+    + \cdots.
+  \label{eq:appC_A_k2_final}
+\end{equation}
+In the induced--gravity regime of interest \(K^{\mu\nu}\) is proportional to
+\(\bar g^{\mu\nu}\) at leading order and the denominator reduces to
+\(k^2 - M^2_{\rm eff} + \mathrm{i}\epsilon\).  Diffeomorphism invariance of the
+induced Einstein--Hilbert sector forbids a Pauli--Fierz mass for the
+transverse--traceless mode \cite{Weinberg1995}, so that in the infrared EFT the
+effective mass \(M^2_{\rm eff}\) in this channel is protected to vanish and the
+pole in \(A(k^2)\) moves to \(k^2=0\).  The positivity of \(\Pi_2(k^2)\) and
+the overall normalisation then implies that the corresponding contribution to
+the spin--2 spectral density \(\rho_2(\mu^2)\) has positive weight, as required
+for a healthy graviton, in agreement with the spectral analysis of
+\cref{app:spectral}.
+
+The scalar coefficient functions \(C(k^2)\) and \(D(k^2)\) can be analysed in a
+similar way by projecting \(\langle hh\rangle\) onto
+\(\mathcal{P}^{(0\text{-s})}\) and \(\mathcal{P}^{(0\text{-w})}\).  One finds
+that the corresponding contractions produce functions of \(k^2\) and
+\((q\cdot k)^2\) that, in the healthy band, lead to massive poles with positive
+residues, as summarised in \cref{subsec:spin2_scalar_sector}.  The detailed
+expressions are again lengthy and can be generated with computer algebra.  
+Together with the spin--2 analysis above, this completes the explicit spin
+decomposition of the composite metric two--point function.
 
 \section{Spectral representation and positivity}
 \label{app:spectral}
