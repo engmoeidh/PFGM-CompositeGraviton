@@ -444,30 +444,145 @@ so that \(\chi\) admits a well--defined propagator on the constant--gradient
 background and can be used to construct a composite metric fluctuation operator
 with sensible infrared behaviour.
 
+% =========================================================
 \section{Composite metric fluctuations}
 \label{sec:composite_fluctuations}
-% - Define fluctuations of the composite metric in terms of \chi
-% - Derive quadratic action for \chi (or canonical \psi)
-% - Identify composite h_{\mu\nu}[\Phi] operator
+
+In this section we construct the composite metric fluctuation operator
+\(h_{\mu\nu}[\Phi]\) and derive the quadratic action and propagator for the
+underlying proto--field fluctuation \(\chi\) on the constant--gradient
+background introduced in \cref{subsec:bg_constant_gradient}.  These results
+provide the basic input for the analysis of the emergent spin--2 propagator in
+\cref{sec:spin2_propagator}.
 
 \subsection{Background-field split and canonical fluctuation}
 \label{subsec:fluct_split}
-% - \Phi = \Phi_0 + \chi, relation to canonically normalised \psi
-% - Quadratic expansion of microscopic action around \Phi_0
-% - Kinetic operator and principal symbol
+
+We begin by decomposing the proto--field into a background configuration and a
+fluctuation,
+\begin{equation}
+  \Phi(x) = \Phi_0(x) + \chi(x),
+  \qquad
+  \Phi_0(x) = q_\mu x^\mu,
+\end{equation}
+where \(q_\mu\) is a constant timelike vector and \(\chi\) denotes the
+fluctuation.  On this background the kinetic invariant
+\(X = -\tfrac12 \eta^{\mu\nu}\partial_\mu\Phi\,\partial_\nu\Phi\) takes the
+constant value
+\begin{equation}
+  X_0 = -\frac12\,\eta^{\mu\nu}q_\mu q_\nu,
+\end{equation}
+and the composite metric reduces to the flat tensor
+\(\bar g_{\mu\nu} = g^{\rm eff}_{\mu\nu}[\Phi_0]
+ = \eta_{\mu\nu} + \alpha q_\mu q_\nu\) introduced in
+\cref{subsec:bg_constant_gradient}.
+
+Expanding the microscopic action \(\int \dd^4x\,\mathcal{L}_\Phi(\Phi)\) to
+second order in \(\chi\) and discarding total derivatives yields the quadratic
+action
+\begin{equation}
+  S^{(2)}[\chi;\Phi_0]
+  = \frac12\int \mathrm{d}^4x\,\sqrt{-\bar g}\,
+     \chi\,\mathcal{D}[\bar g,\Phi_0]\,\chi,
+  \label{eq:fluct_quadratic_action}
+\end{equation}
+where \(\mathcal{D}[\bar g,\Phi_0]\) is a second--order differential operator
+whose principal symbol and lower--derivative terms are determined by the
+derivatives of \(P(X)\) evaluated at \(X_0\) and by the quartic derivative
+coupling \(\beta_2\); explicit expressions are given in
+\cref{app:quad_action}.  In the healthy band defined in
+\cref{app:quad_dispersion} the eigenvalues of the principal symbol are
+positive, so that \(\chi\) defines a single propagating scalar degree of
+freedom with a real dispersion relation and no ghosts.
 
 \subsection{Linearised composite metric}
 \label{subsec:fluct_linear_metric}
-% - Expand g^{eff}_{\mu\nu}[\Phi] to linear order in \chi:
-%   h_{\mu\nu} \equiv \delta g^{eff}_{\mu\nu}[\chi]
-% - Express h_{\mu\nu} in terms of q_\mu and \partial_\mu \chi on chosen background
-% - Discuss symmetries and gauge redundancy (if any) at this stage
+
+The effective metric depends on \(\Phi\) only through its gradient.  Expanding
+\(g^{\rm eff}_{\mu\nu}[\Phi]\) around the constant--gradient background yields
+\begin{equation}
+  g^{\rm eff}_{\mu\nu}[\Phi]
+  = g^{\rm eff}_{\mu\nu}[\Phi_0]
+    + \delta g^{\rm eff}_{\mu\nu}[\chi]
+    + \delta^2 g^{\rm eff}_{\mu\nu}[\chi]
+    + \cdots,
+\end{equation}
+where the linear term is
+\begin{equation}
+  \delta g^{\rm eff}_{\mu\nu}[\chi]
+  = \alpha\big(
+      \partial_\mu\Phi_0\,\partial_\nu\chi
+    + \partial_\mu\chi\,\partial_\nu\Phi_0
+    \big)
+  = \alpha\big(
+      q_\mu\,\partial_\nu\chi
+    + q_\nu\,\partial_\mu\chi
+    \big),
+\end{equation}
+using \(\partial_\mu\Phi_ = q_\mu\).  We define the linearised composite metric
+fluctuation operator
+\begin{equation}
+  h_{\mu\nu}(x)
+  \equiv \delta g^{\rm eff}_{\mu\nu}[\chi](x)
+  = \alpha\big(
+      q_\mu\,\partial_\nu\chi(x)
+    + q_\nu\,\partial_\mu\chi(x)
+    \big),
+  \label{eq:fluct_h_def}
+\end{equation}
+which will be the central object in our analysis of the emergent tensor
+sector.  Higher--order terms \(\delta^2 g^{\rm eff}_{\mu\nu}[\chi]\) generate
+self--interactions among the composite gravitons but do not affect the
+tree--level two--point function studied in \cref{sec:spin2_propagator}.
+
+It is convenient to work in momentum space with respect to the background
+coordinates associated with \(\bar g_{\mu\nu}\).  Writing
+\begin{equation}
+  \chi(x) = \int \frac{\mathrm{d}^4k}{(2\pi)^4}\,
+  \mathrm{e}^{\mathrm{i}k\cdot x}\,\chi(k),
+\end{equation}
+and using \cref{eq:fluct_h_def} we obtain
+\begin{equation}
+  h_{\mu\nu}(k)
+  = \alpha\,\mathrm{i}
+    \big( q_\mu k_\nu + q_\nu k_\mu \big)\chi(k),
+\end{equation}
+which is the expression used in \cref{sec:spin2_propagator} and detailed
+further in \cref{app:hh_wick}.
 
 \subsection{Quadratic action and proto--field propagator}
 \label{subsec:fluct_quadratic_action}
-% - Write S^{(2)}[\chi;\Phi_0] (or \psi) on the background
-% - Derive momentum-space propagator for \chi (or \psi)
-% - Identify effective mass/dispersion and IR regime of interest
+
+The quadratic action \eqref{eq:fluct_quadratic_action} is translationally
+invariant on the constant--gradient background and can be diagonalised in
+momentum space.  In terms of the Fourier modes \(\chi(k)\) one finds
+\begin{equation}
+  S^{(2)}[\chi;\Phi_0]
+  = \frac12 \int \frac{\mathrm{d}^4k}{(2\pi)^4}\,
+    \chi(-k)\,\mathcal{K}(k;\Phi_0)\,\chi(k),
+\end{equation}
+with a kernel of the form
+\begin{equation}
+  \mathcal{K}(k;\Phi_0)
+  = Z_\chi\big(K^{\mu\nu}k_\mu k_\nu - M^2_{\rm eff} + \cdots\big),
+\end{equation}
+where \(Z_\chi>0\) is a positive normalisation, \(K^{\mu\nu}\) is an effective
+characteristic tensor whose leading piece is proportional to \(\bar g^{\mu\nu}\)
+in the induced--gravity regime, and the ellipsis denotes higher--derivative
+corrections suppressed at low momentum.  The corresponding propagator is
+\begin{equation}
+  \big\langle \chi(k)\,\chi(-k)\big\rangle
+  = \frac{\mathrm{i}}{Z_\chi}\,
+    \frac{1}{K^{\mu\nu}k_\mu k_\nu - M^2_{\rm eff} + \mathrm{i}\epsilon}
+  + \cdots,
+\end{equation}
+which reduces to the standard Klein--Gordon form for small \(k^2\) in the
+healthy band.  This expression, together with the linear relation
+\cref{eq:fluct_h_def}, fully determines the Gaussian statistics of the
+composite metric fluctuation and serves as the input for the emergent spin--2
+propagator analysis in \cref{sec:spin2_propagator} and
+\cref{app:hh_correlator}.
+
 
 
 % =========================================================
@@ -984,9 +1099,6 @@ Einstein--Hilbert theory.
 
 \section{Discussion}
 \label{sec:discussion}
-% - Interpret main results qualitatively
-% - Compare to other emergent gravity / induced gravity scenarios
-% - Highlight novelty: explicit composite graviton operator with spin--2 pole
 
 \subsection{Comparison with previous PFGM results}
 \label{subsec:disc_PFGM}
@@ -1007,9 +1119,6 @@ gravitational interaction in the induced--gravity sector used in the
 post--Newtonian and strong--field treatments, and its coupling to matter
 derived in \cref{sec:linearised_dynamics} matches the assumptions made in those
 works.
-% - Relation to Papers I--III (PN tests, strong-field structure)
-% - Relation to cosmological constant solution and mesoscopic halos
-% - How emergent spin--2 mode fits into the global PFGM picture
 
 \subsection{Relation to other emergent gravity frameworks}
 \label{subsec:disc_other_frameworks}
@@ -1108,26 +1217,18 @@ paper.
 
 \section{Outlook}
 \label{sec:outlook}
-% - Future directions and open questions
 
 \subsection{Extensions to cosmology and inhomogeneous backgrounds}
 \label{subsec:outlook_cosmo}
-% - Generalisation to FRW, late-time cosmology
-% - Impact on tensor modes / primordial gravitational waves
 
 \subsection{Beyond linear order: interactions and non-Gaussianities}
 \label{subsec:outlook_interactions}
-% - Higher-point functions of h_{\mu\nu}[\Phi]
-% - Self-interactions and departures from GR at nonlinear level
 
 \subsection{Links to mesoscopic halos and dark matter phenomenology}
 \label{subsec:outlook_mesoscopic}
-% - Possible interplay between composite graviton sector and mesoscopic coherence scale
-% - How this feeds into dark-matter/halo phenomenology in other PFGM papers
 
 \subsection{Open problems}
 \label{subsec:outlook_open_problems}
-% - List of concrete technical and conceptual questions left for future work
 
 
 % =========================================================
