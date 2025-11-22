@@ -22,3 +22,120 @@ The goal of this paper is to:
 
 Compilation instructions will be added once the LaTeX toolchain is finalised 
 (e.g. `latexmk` or `pdflatex` pipeline).
+
+## Reproducing internal checks
+
+This repository includes simple scripts to regenerate the internal consistency
+checks used in the composite-graviton analysis.
+
+To run all checks and regenerate the associated data files:
+
+```bash
+cd ~/Projects/PFGM-CompositeGraviton
+bash scripts/run_all_checks.sh
+This will produce:
+
+data/healthy_band_scan.csv: a scan over the space of 
+𝑃
+′
+(
+𝑋
+0
+)
+P
+′
+(X
+0
+​
+
+) and
+
+𝑃
+′
+′
+(
+𝑋
+0
+)
+P
+′′
+(X
+0
+​
+
+), recording where the ghost and gradient stability conditions
+
+𝑍
+𝑡
+>
+0
+Z
+t
+​
+
+>0, 
+𝑍
+𝑠
+>
+0
+Z
+s
+​
+
+>0 and 
+𝑐
+𝑠
+2
+>
+0
+c
+s
+2
+​
+
+>0 are satisfied, as discussed in
+App.~\texttt{B}.
+
+data/spin2_F2_samples.csv: explicit evaluations of the spin--2 projector
+contraction 
+𝐹
+2
+(
+𝑞
+,
+𝑘
+)
+F
+2
+​
+
+(q,k) for a set of timelike background gradients 
+𝑞
+𝜇
+q
+μ
+​
+
+
+and momenta 
+𝑘
+𝜇
+k
+μ
+​
+
+, illustrating that the transverse--traceless coefficient
+
+𝐴
+(
+𝑘
+2
+)
+A(k
+2
+) is nonvanishing with positive residue in the healthy band, in
+agreement with App.~\texttt{C} and App.~\texttt{D}.
+
+These scripts are intended as internal and referee-facing cross-checks of the
+analytic results presented in the main text and appendices; they are not
+required to compile the LaTeX document.
