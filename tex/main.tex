@@ -1836,6 +1836,27 @@ expressions are again lengthy but can be obtained by straightforward algebra.
 Together with the spin--2 analysis above, this completes the explicit spin
 decomposition of the composite metric two--point function.
 
+As a numerical check of the sign and magnitude of the spin--2 coefficient, we
+have evaluated the projector contraction \(F_2(q,k)\) on a representative set
+of timelike background gradients and momenta using the script
+\texttt{scripts/check\_spin2\_structure.py}.  The resulting samples, stored in
+\texttt{data/spin2\_F2\_samples.csv}, are summarised in
+\Cref{fig:spin2_F2_vs_k2,tab:spin2_F2_stats}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.6\textwidth]{../figures/fig_spin2_F2_vs_k2}
+  \caption{Sample values of the spin--2 projector contraction
+  \(F_2(q,k)\) as a function of \(k^2\) for a timelike background gradient
+  \(q_\mu\) lying in the healthy band.  All sampled points have positive
+  \(F_2\), in agreement with the analytic structure of
+  \cref{app:hh_spin_coeffs} and the positivity of the spin--2 spectral
+  density discussed in \cref{app:spectral}.}
+  \label{fig:spin2_F2_vs_k2}
+\end{figure}
+
+\input{../results/table_spin2_F2_stats}
+
 \section{Spectral representation and positivity}
 \label{app:spectral}
 
