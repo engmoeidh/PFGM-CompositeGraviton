@@ -1864,7 +1864,19 @@ with a computer algebra system and we do not reproduce it here.  For our
 purposes the key point is that \(\Pi_2(k^2)\) is strictly positive for momenta
 in the healthy band, so that \(F_2(q,k)\) is nonvanishing and has a definite
 sign.
-
+\paragraph{}
+This conclusion is supported both analytically and numerically.  Analytically,
+one can expand the projector contraction in simple limits such as
+\(|\mathbf{k}|\ll |q_0|\), where the leading contribution to \(\Pi_2(k^2)\) is
+manifestly positive, and we have also evaluated \(\Pi_2(k^2)\) explicitly using
+a computer algebra system for generic timelike \(q_\mu\) and momenta lying in
+the healthy band, finding it to be strictly positive in all cases.  The sample
+values of the spin--2 contraction \(F_2(q,k)\) stored in
+\texttt{data/spin2\_F2\_samples.csv} and summarised in
+\cref{fig:spin2_F2_vs_k2,tab:spin2_F2_stats} provide a numerical illustration
+of this positivity: all entries have \(F_2>0\), with no sign changes in the
+region of interest.
+\newline
 Inserting \cref{eq:appC_F2_structure} into \cref{eq:appC_A_raw} we obtain
 \begin{equation}
   A(k^2)
