@@ -993,6 +993,94 @@ curvature--squared operators or in regimes where the induced--gravity EFT
 itself begins to break down, providing a target for future phenomenological
 investigations.
 
+\subsection{Static limit and Newtonian potential}
+\label{subsec:lin_Newtonian_potential}
+
+It is instructive to check explicitly that the composite graviton reproduces
+the Newtonian potential between nonrelativistic sources.  Consider two static,
+conserved sources \(T^{(1)}_{\mu\nu}\) and \(T^{(2)}_{\mu\nu}\) with masses
+\(m_1\) and \(m_2\), localised in space and at rest in the constant--gradient
+background, so that \(T^{(a)}_{00} = \rho_a(\mathbf{x})\), \(\rho_a \simeq m_a
+\delta^{(3)}(\mathbf{x}-\mathbf{x}_a)\), and spatial components are suppressed
+by powers of the velocities.  In the induced--gravity regime the transverse--traceless
+composite graviton propagator takes the form
+\begin{equation}
+  \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle_{\rm TT}
+  \simeq \frac{Z_2}{k^2 + \mathrm{i}\epsilon}\,
+    \mathcal{P}^{(2)}_{\mu\nu\rho\sigma},
+  \label{eq:lin_TT_prop_again}
+\end{equation}
+with \(Z_2>0\) and the spin--2 projector \(\mathcal{P}^{(2)}_{\mu\nu\rho\sigma}\)
+constructed from the background metric, as in
+\cref{app:conventions_projectors,app:hh_correlator}.
+
+The tree--level exchange amplitude between the two sources mediated by the
+composite graviton is, schematically,
+\begin{equation}
+  \mathcal{A}(k)
+  \sim T^{(1)\,\mu\nu}(k)\,
+       \big\langle h_{\mu\nu}(k)\,h_{\rho\sigma}(-k)\big\rangle_{\rm TT}\,
+       T^{(2)\,\rho\sigma}(-k),
+\end{equation}
+so that in the nonrelativistic, static limit \(k^0\to 0\) and
+\(T_{00}\gg T_{0i},T_{ij}\), one finds
+\begin{equation}
+  \mathcal{A}(k^0=0,\mathbf{k})
+  \propto Z_2\,\frac{\tilde\rho_1(\mathbf{k})\,\tilde\rho_2(-\mathbf{k})}
+                   {\mathbf{k}^2},
+\end{equation}
+up to conventional numerical factors.\footnote{A careful derivation using the
+standard linearised Einstein equations and the coupling \(h^{\mu\nu}T_{\mu\nu}\)
+can be found in any textbook on general relativity; see, for example,
+Refs.~\cite{Weinberg1995,Ryder2009}.  Here we simply note that the structure of
+the composite propagator and coupling is identical to that of the linearised
+Einstein graviton in the induced--gravity regime, with \(Z_2\) identified with
+\(1/M_{\rm Pl}^2\) as discussed in \cref{app:induced_implications}.}
+Fourier transforming to position space yields the familiar Newtonian potential
+between the two sources,
+\begin{equation}
+  V(r)
+  \simeq -\,\frac{G_{\rm eff} m_1 m_2}{r},
+  \qquad
+  G_{\rm eff} \sim \frac{1}{8\pi M_{\rm Pl}^2},
+\end{equation}
+with the sign fixed by the positivity of \(Z_2\) and the tensor structure of
+\(\mathcal{P}^{(2)}_{\mu\nu\rho\sigma}\).  In the healthy band, the scalar
+sector encoded in \(C(k^2)\) and \(D(k^2)\) is massive and does not generate an
+additional long--range \(1/r\) force, so that the leading static potential is
+purely of Newtonian form in the induced--gravity window.
+
+Fourier transforming to position space yields the familiar Newtonian potential
+between the two sources,
+\begin{equation}
+  V(r)
+  \simeq -\,\frac{G_{\rm eff} m_1 m_2}{r},
+  \qquad
+  G_{\rm eff} \simeq \frac{1}{8\pi M_{\rm Pl}^2},
+\end{equation}
+where the precise numerical coefficient relating \(G_{\rm eff}\) and
+\(M_{\rm Pl}^{-2}\) follows from the standard general--relativistic computation
+in the linearised Einstein theory.\footnote{See, for example,
+Refs.~\cite{Weinberg1995,Ryder1996} for the derivation of the Newtonian limit
+of general relativity.  In our setup the composite graviton has the same
+transverse--traceless propagator and coupling structure, with
+\(Z_2 \simeq 1/M_{\rm Pl}^2\) as discussed in \cref{app:induced_implications},
+so the standard relation between \(G\) and \(M_{\rm Pl}\) is inherited in the
+induced--gravity regime.}
+
+This check shows explicitly that the composite graviton mediates an attractive
+\(1/r\) potential between nonrelativistic masses with the same tensor structure
+and sign as in general relativity, and that the effective Newton constant is
+set by the induced Planck mass.  In the overlap regime where the induced
+Einstein--Hilbert term reproduces the observed value of Newton's constant,
+i.e. for parameter choices that match \(M_{\rm Pl}\) to the measured Planck
+scale \cite{Hanash:PFGM-I,Hanash:Induced-EH}, one has
+\(G_{\rm eff}\simeq G_{\rm N}\).  The scalar sector encoded in
+\(C(k^2)\) and \(D(k^2)\) is massive and does not generate an additional
+long--range \(1/r\) force in the healthy band, so the leading static potential
+remains purely Newtonian in the infrared.
+
+
 \section{Degrees of freedom and emergent gauge structure}
 \label{sec:DOF_gauge}
 
@@ -1128,6 +1216,52 @@ gradients and small curvature, the composite metric fluctuation
 \(h_{\mu\nu}[\Phi]\) furnishes an emergent tensor sector whose infrared
 propagator and coupling to matter match those of the graviton in the induced
 Einstein--Hilbert theory.
+
+
+\subsection{Weinberg--Witten considerations}
+\label{subsec:WW}
+
+The appearance of a massless spin--2 sector in the infrared effective theory
+of the composite metric \(g^{\rm eff}_{\mu\nu}\), starting from a microscopic
+theory with only a scalar field on Minkowski space, raises natural questions
+about the applicability of the Weinberg--Witten theorem.  In its standard form,
+the theorem states that in a Poincar\'e--invariant quantum field theory on
+\((\mathbb{R}^{1,3},\eta_{\mu\nu})\) with a conserved, Lorentz--covariant
+stress tensor \(T_{\mu\nu}(\eta)\) that generates time translations, no
+massless particle of spin \(s>1\) can carry the corresponding
+energy--momentum charge \cite{WeinbergWitten1980}.
+
+In the present construction the hypotheses of the theorem are not jointly
+satisfied in the regime where the induced gravitational sector is relevant.
+First, once the composite metric \(g^{\rm eff}_{\mu\nu}[\Phi]\) acquires an
+induced Einstein--Hilbert term, the appropriate long--wavelength description is
+a diffeomorphism--invariant effective field theory on the curved background
+\((\mathcal M,g^{\rm eff}_{\mu\nu}[\Phi_0])\), rather than a globally
+Poincar\'e--invariant theory on \((\mathbb{R}^{1,3},\eta_{\mu\nu})\).  Generic
+backgrounds \(\Phi_0\) with nonzero gradient break Minkowski Poincar\'e
+invariance.  Second, as in general relativity, the graviton in this induced
+EFT does not admit a local, gauge--invariant, Lorentz--covariant stress tensor:
+the spin--2 mode couples to the diffeomorphism--covariant Hilbert tensor
+\(T_{\mu\nu}(g^{\rm eff})\) of the induced action, not to a conserved
+\(T_{\mu\nu}(\eta)\) on the original Minkowski background.  Third, we do not
+construct Minkowski one--particle graviton states that carry the microscopic
+\(T_{\mu\nu}(\eta)\) charge; the massless spin--2 excitations studied here are
+collective infrared degrees of freedom of the induced metric EFT.
+
+Our claim is therefore modest and precise: in the induced--gravity window the
+background--field EFT for \(g^{\rm eff}_{\mu\nu}\) reproduces the phenomenology
+of general relativity with \(G\to G^{(\\Phi)}_{\rm ind}\) as discussed in
+Ref.~\cite{Hanash:Induced-EH}, while remaining consistent with the
+Weinberg--Witten theorem because the latter's assumptions (exact Minkowski
+Poincar\'e invariance, a Lorentz--covariant conserved stress tensor carrying
+the graviton charge, and an \(S\)-matrix built from Minkowski one--particle
+spin--2 states) are not simultaneously realised in the regime of interest.\footnote{A
+useful analogy is provided by emergent excitations in condensed--matter
+systems: the microscopic theory may be formulated on a fixed background, yet
+the relevant low--energy quasiparticles propagate on an effective medium and
+carry charges associated with its conserved quantities, without violating the
+Weinberg--Witten assumptions.}
+
 
 \section{Discussion}
 \label{sec:discussion}
